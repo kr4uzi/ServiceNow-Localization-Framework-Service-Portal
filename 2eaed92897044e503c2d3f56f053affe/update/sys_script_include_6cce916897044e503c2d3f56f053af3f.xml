@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_376096_lfp_sp.WidgetProcessor</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Script that is used while processing or translating an artifact</description>
+        <name>WidgetProcessor</name>
+        <script><![CDATA[/* global global */
+/* global Class, GlideRecord */
+/* eslint no-undef: "error" */
+var WidgetProcessor = Class.create();
+WidgetProcessor.prototype = Object.extendsObject(global.LFArtifactProcessorSNC, {
+    category: 'localization_framework', // DO NOT REMOVE THIS LINE!
+
+    /**********
+     * Extracts the translatable content for the artifact record
+     * 
+     * @param params.tableName The table name of the artifact record
+     * @param params.sysId The sys_id of the artifact record 
+     * @param params.language Language into which the artifact has to be translated (Target language)
+     * @return LFDocumentContent object
+     **********/
+    getTranslatableContent: function(params) {
+		/**********
+         * Use LFDocumentContentBuilder to build the LFDocumentContent object
+         * Use the build() to return the LFDocumentContent object
+         **********/
+		const builder = new global.LFDocumentContentBuilder('v1', params.language, params.sysId, params.tableName, params);
+		const widgetGr = new GlideRecord(params.tableName);
+		widgetGr.query('sys_id', params.sysId);
+		widgetGr.setLimit(1);
+		widgetGr.query();
+		if (widgetGr.next()) {
+			processHTML(widgetGr, builder);
+			
+			const widgetName = widgetGr.getDisplayValue();
+			// Server script and Client controller simply have to translate gs.getMessage / i18n.getMessage
+			['script', 'client_script'].forEach(field => {
+				const element = widgetGr.getElement(field);
+				const label = element.getLabel();
+				builder.processScript(element.toString(), label + ': ' + widgetName, label);
+			});
+		}
+		
+		return builder.build();
+		
+		function processHTML(widgetGr, builder) {
+			// in-place translations via ${ MESSAGE } in 'Body HTML template'
+			const html = widgetGr.template.toString();
+			const messageRegex = /\${\s*([^]*?)\s*}/g;
+			let messages = [];
+			let match = null;
+			while ((match = messageRegex.exec(html)) != null) {
+				const msg = match[1];
+				if (!msg.includes(msg)) {
+					messages.push(match[1]);
+				}
+			}
+			
+			const htmlLabel = widgetGr.template.getLabel();
+			const widgetName = widgetGr.getDisplayValue();
+			builder.processStringArray(messages, htmlLabel + ': ' + widgetName, htmlLabel);
+		}
+    },
+
+    /**********
+     * Uncomment the saveTranslatedContent function to override the default behavior of saving translations
+     * 
+     * @param documentContent LFDocumentContent object
+     * @return
+     **********/
+    /**********
+        saveTranslatedContent: function(documentContent) {},
+    **********/
+
+    type: 'WidgetProcessor'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>markus.kraus</sys_created_by>
+        <sys_created_on>2024-01-27 00:39:19</sys_created_on>
+        <sys_id>6cce916897044e503c2d3f56f053af3f</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>WidgetProcessor</sys_name>
+        <sys_package display_value="Localization Framework+ Service Portal" source="x_376096_lfp_sp">2eaed92897044e503c2d3f56f053affe</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Localization Framework+ Service Portal">2eaed92897044e503c2d3f56f053affe</sys_scope>
+        <sys_update_name>sys_script_include_6cce916897044e503c2d3f56f053af3f</sys_update_name>
+        <sys_updated_by>markus.kraus</sys_updated_by>
+        <sys_updated_on>2024-01-27 09:54:36</sys_updated_on>
+    </sys_script_include>
+</record_update>

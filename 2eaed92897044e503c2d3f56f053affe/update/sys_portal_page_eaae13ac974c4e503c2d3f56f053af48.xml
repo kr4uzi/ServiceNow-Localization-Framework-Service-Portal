@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update node_type="sys_portal_page" unload_date="2024-01-27 10:18:32">
+    <sys_portal_page action="INSERT_OR_UPDATE">
+        <layout/>
+        <order/>
+        <read_roles/>
+        <roles/>
+        <selectable>false</selectable>
+        <sys_class_name>sys_portal_page</sys_class_name>
+        <sys_created_by>markus.kraus</sys_created_by>
+        <sys_created_on>2024-01-27 09:57:28</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>eaae13ac974c4e503c2d3f56f053af48</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>PA LF+ SP - Pages</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Localization Framework+ Service Portal" source="x_376096_lfp_sp">2eaed92897044e503c2d3f56f053affe</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Localization Framework+ Service Portal">2eaed92897044e503c2d3f56f053affe</sys_scope>
+        <sys_update_name>sys_portal_page_eaae13ac974c4e503c2d3f56f053af48</sys_update_name>
+        <sys_updated_by>markus.kraus</sys_updated_by>
+        <sys_updated_on>2024-01-27 10:06:06</sys_updated_on>
+        <title>PA LF+ SP - Pages</title>
+        <user/>
+        <view>pa_lfp_sp_pages</view>
+        <related_items_node>
+            <sys_portal action="INSERT_OR_UPDATE">
+                <dropzone/>
+                <offset/>
+                <page display_value="PA LF+ SP - Pages">eaae13ac974c4e503c2d3f56f053af48</page>
+                <summary>LastUpdatedTime</summary>
+                <sys_created_by>markus.kraus</sys_created_by>
+                <sys_created_on>2024-01-27 09:57:41</sys_created_on>
+                <sys_id>2dbe5f2c974c4e503c2d3f56f053af5d</sys_id>
+                <sys_mod_count>2</sys_mod_count>
+                <sys_updated_by>markus.kraus</sys_updated_by>
+                <sys_updated_on>2024-01-27 10:06:19</sys_updated_on>
+                <related_items_node>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>type</name>
+                        <portal_section display_value="Created 2024-01-27 10:57:41">2dbe5f2c974c4e503c2d3f56f053af5d</portal_section>
+                        <sys_created_by>markus.kraus</sys_created_by>
+                        <sys_created_on>2024-01-27 09:57:41</sys_created_on>
+                        <sys_id>21be53ac974c4e503c2d3f56f053af4b</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>markus.kraus</sys_updated_by>
+                        <sys_updated_on>2024-01-27 09:57:41</sys_updated_on>
+                        <value>content_block_programmatic</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>renderer</name>
+                        <portal_section display_value="Created 2024-01-27 10:57:41">2dbe5f2c974c4e503c2d3f56f053af5d</portal_section>
+                        <sys_created_by>markus.kraus</sys_created_by>
+                        <sys_created_on>2024-01-27 09:57:41</sys_created_on>
+                        <sys_id>2dbe5f2c974c4e503c2d3f56f053af5e</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>markus.kraus</sys_updated_by>
+                        <sys_updated_on>2024-01-27 09:57:41</sys_updated_on>
+                        <value>com.glide.cms.RenderBlock</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2024-01-27 10:57:41">2dbe5f2c974c4e503c2d3f56f053af5d</portal_section>
+                        <sys_created_by>markus.kraus</sys_created_by>
+                        <sys_created_on>2024-01-27 09:57:41</sys_created_on>
+                        <sys_id>a1be5f2c974c4e503c2d3f56f053af5e</sys_id>
+                        <sys_mod_count>1</sys_mod_count>
+                        <sys_updated_by>markus.kraus</sys_updated_by>
+                        <sys_updated_on>2024-01-27 10:06:34</sys_updated_on>
+                        <value>ba5e4560c31320107f3a91f58640ddcc</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created 2024-01-27 10:57:41">2dbe5f2c974c4e503c2d3f56f053af5d</portal_section>
+                        <sys_created_by>markus.kraus</sys_created_by>
+                        <sys_created_on>2024-01-27 09:57:41</sys_created_on>
+                        <sys_id>edbe5f2c974c4e503c2d3f56f053af5e</sys_id>
+                        <sys_mod_count>1</sys_mod_count>
+                        <sys_updated_by>markus.kraus</sys_updated_by>
+                        <sys_updated_on>2024-01-27 10:06:43</sys_updated_on>
+                        <value>LastUpdatedTime</value>
+                    </sys_portal_preferences>
+                </related_items_node>
+            </sys_portal>
+            <sys_portal action="INSERT_OR_UPDATE">
+                <dropzone/>
+                <offset/>
+                <page display_value="PA LF+ SP - Pages">eaae13ac974c4e503c2d3f56f053af48</page>
+                <summary>Portal Pages</summary>
+                <sys_created_by>markus.kraus</sys_created_by>
+                <sys_created_on>2024-01-27 09:57:50</sys_created_on>
+                <sys_id>77be93ac974c4e503c2d3f56f053af81</sys_id>
+                <sys_mod_count>2</sys_mod_count>
+                <sys_updated_by>markus.kraus</sys_updated_by>
+                <sys_updated_on>2024-01-27 10:00:06</sys_updated_on>
+                <related_items_node>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>help_text_window</name>
+                        <portal_section display_value="Created 2024-01-27 10:57:50">77be93ac974c4e503c2d3f56f053af81</portal_section>
+                        <sys_created_by>markus.kraus</sys_created_by>
+                        <sys_created_on>2024-01-27 09:57:50</sys_created_on>
+                        <sys_id>33be93ac974c4e503c2d3f56f053af82</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>markus.kraus</sys_updated_by>
+                        <sys_updated_on>2024-01-27 09:57:50</sys_updated_on>
+                        <value>report_widget_description</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>renderer</name>
+                        <portal_section display_value="Created 2024-01-27 10:57:50">77be93ac974c4e503c2d3f56f053af81</portal_section>
+                        <sys_created_by>markus.kraus</sys_created_by>
+                        <sys_created_on>2024-01-27 09:57:50</sys_created_on>
+                        <sys_id>7fbe93ac974c4e503c2d3f56f053af81</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>markus.kraus</sys_updated_by>
+                        <sys_updated_on>2024-01-27 09:57:50</sys_updated_on>
+                        <value>com.glide.ui.portal.RenderReport</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created 2024-01-27 10:57:50">77be93ac974c4e503c2d3f56f053af81</portal_section>
+                        <sys_created_by>markus.kraus</sys_created_by>
+                        <sys_created_on>2024-01-27 09:57:50</sys_created_on>
+                        <sys_id>b7be93ac974c4e503c2d3f56f053af82</sys_id>
+                        <sys_mod_count>1</sys_mod_count>
+                        <sys_updated_by>markus.kraus</sys_updated_by>
+                        <sys_updated_on>2024-01-27 10:00:06</sys_updated_on>
+                        <value>Portal Pages</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_subscribe</name>
+                        <portal_section display_value="Created 2024-01-27 10:57:50">77be93ac974c4e503c2d3f56f053af81</portal_section>
+                        <sys_created_by>markus.kraus</sys_created_by>
+                        <sys_created_on>2024-01-27 09:57:50</sys_created_on>
+                        <sys_id>f3be93ac974c4e503c2d3f56f053af82</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>markus.kraus</sys_updated_by>
+                        <sys_updated_on>2024-01-27 09:57:50</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2024-01-27 10:57:50">77be93ac974c4e503c2d3f56f053af81</portal_section>
+                        <sys_created_by>markus.kraus</sys_created_by>
+                        <sys_created_on>2024-01-27 09:57:50</sys_created_on>
+                        <sys_id>f7be93ac974c4e503c2d3f56f053af81</sys_id>
+                        <sys_mod_count>1</sys_mod_count>
+                        <sys_updated_by>markus.kraus</sys_updated_by>
+                        <sys_updated_on>2024-01-27 10:00:06</sys_updated_on>
+                        <value>094f57ac974c4e503c2d3f56f053afee</value>
+                    </sys_portal_preferences>
+                </related_items_node>
+            </sys_portal>
+            <sys_portal action="INSERT_OR_UPDATE">
+                <dropzone/>
+                <offset/>
+                <page display_value="PA LF+ SP - Pages">eaae13ac974c4e503c2d3f56f053af48</page>
+                <summary>Portal Page Translations In Progress</summary>
+                <sys_created_by>markus.kraus</sys_created_by>
+                <sys_created_on>2024-01-27 09:57:56</sys_created_on>
+                <sys_id>99cedf6c974c4e503c2d3f56f053af05</sys_id>
+                <sys_mod_count>2</sys_mod_count>
+                <sys_updated_by>markus.kraus</sys_updated_by>
+                <sys_updated_on>2024-01-27 10:01:44</sys_updated_on>
+                <related_items_node>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_subscribe</name>
+                        <portal_section display_value="Created 2024-01-27 10:57:56">99cedf6c974c4e503c2d3f56f053af05</portal_section>
+                        <sys_created_by>markus.kraus</sys_created_by>
+                        <sys_created_on>2024-01-27 09:57:56</sys_created_on>
+                        <sys_id>19cedf6c974c4e503c2d3f56f053af06</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>markus.kraus</sys_updated_by>
+                        <sys_updated_on>2024-01-27 09:57:56</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2024-01-27 10:57:56">99cedf6c974c4e503c2d3f56f053af05</portal_section>
+                        <sys_created_by>markus.kraus</sys_created_by>
+                        <sys_created_on>2024-01-27 09:57:56</sys_created_on>
+                        <sys_id>1dcedf6c974c4e503c2d3f56f053af05</sys_id>
+                        <sys_mod_count>1</sys_mod_count>
+                        <sys_updated_by>markus.kraus</sys_updated_by>
+                        <sys_updated_on>2024-01-27 10:01:44</sys_updated_on>
+                        <value>c5af5bec974c4e503c2d3f56f053af25</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>help_text_window</name>
+                        <portal_section display_value="Created 2024-01-27 10:57:56">99cedf6c974c4e503c2d3f56f053af05</portal_section>
+                        <sys_created_by>markus.kraus</sys_created_by>
+                        <sys_created_on>2024-01-27 09:57:56</sys_created_on>
+                        <sys_id>55cedf6c974c4e503c2d3f56f053af06</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>markus.kraus</sys_updated_by>
+                        <sys_updated_on>2024-01-27 09:57:56</sys_updated_on>
+                        <value>report_widget_description</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>renderer</name>
+                        <portal_section display_value="Created 2024-01-27 10:57:56">99cedf6c974c4e503c2d3f56f053af05</portal_section>
+                        <sys_created_by>markus.kraus</sys_created_by>
+                        <sys_created_on>2024-01-27 09:57:56</sys_created_on>
+                        <sys_id>91cedf6c974c4e503c2d3f56f053af06</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>markus.kraus</sys_updated_by>
+                        <sys_updated_on>2024-01-27 09:57:56</sys_updated_on>
+                        <value>com.glide.ui.portal.RenderReport</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created 2024-01-27 10:57:56">99cedf6c974c4e503c2d3f56f053af05</portal_section>
+                        <sys_created_by>markus.kraus</sys_created_by>
+                        <sys_created_on>2024-01-27 09:57:56</sys_created_on>
+                        <sys_id>d9cedf6c974c4e503c2d3f56f053af06</sys_id>
+                        <sys_mod_count>1</sys_mod_count>
+                        <sys_updated_by>markus.kraus</sys_updated_by>
+                        <sys_updated_on>2024-01-27 10:01:44</sys_updated_on>
+                        <value>Portal Page Translations In Progress</value>
+                    </sys_portal_preferences>
+                </related_items_node>
+            </sys_portal>
+            <sys_portal action="INSERT_OR_UPDATE">
+                <dropzone/>
+                <offset/>
+                <page display_value="PA LF+ SP - Pages">eaae13ac974c4e503c2d3f56f053af48</page>
+                <summary>Portal Page Translations</summary>
+                <sys_created_by>markus.kraus</sys_created_by>
+                <sys_created_on>2024-01-27 09:58:14</sys_created_on>
+                <sys_id>e1de93ac974c4e503c2d3f56f053af23</sys_id>
+                <sys_mod_count>2</sys_mod_count>
+                <sys_updated_by>markus.kraus</sys_updated_by>
+                <sys_updated_on>2024-01-27 10:02:38</sys_updated_on>
+                <related_items_node>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created 2024-01-27 10:58:14">e1de93ac974c4e503c2d3f56f053af23</portal_section>
+                        <sys_created_by>markus.kraus</sys_created_by>
+                        <sys_created_on>2024-01-27 09:58:14</sys_created_on>
+                        <sys_id>25de93ac974c4e503c2d3f56f053af24</sys_id>
+                        <sys_mod_count>1</sys_mod_count>
+                        <sys_updated_by>markus.kraus</sys_updated_by>
+                        <sys_updated_on>2024-01-27 10:02:38</sys_updated_on>
+                        <value>Portal Page Translations</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_subscribe</name>
+                        <portal_section display_value="Created 2024-01-27 10:58:14">e1de93ac974c4e503c2d3f56f053af23</portal_section>
+                        <sys_created_by>markus.kraus</sys_created_by>
+                        <sys_created_on>2024-01-27 09:58:14</sys_created_on>
+                        <sys_id>61de93ac974c4e503c2d3f56f053af24</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>markus.kraus</sys_updated_by>
+                        <sys_updated_on>2024-01-27 09:58:14</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2024-01-27 10:58:14">e1de93ac974c4e503c2d3f56f053af23</portal_section>
+                        <sys_created_by>markus.kraus</sys_created_by>
+                        <sys_created_on>2024-01-27 09:58:14</sys_created_on>
+                        <sys_id>65de93ac974c4e503c2d3f56f053af23</sys_id>
+                        <sys_mod_count>1</sys_mod_count>
+                        <sys_updated_by>markus.kraus</sys_updated_by>
+                        <sys_updated_on>2024-01-27 10:02:38</sys_updated_on>
+                        <value>5edf5fac974c4e503c2d3f56f053af2d</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>help_text_window</name>
+                        <portal_section display_value="Created 2024-01-27 10:58:14">e1de93ac974c4e503c2d3f56f053af23</portal_section>
+                        <sys_created_by>markus.kraus</sys_created_by>
+                        <sys_created_on>2024-01-27 09:58:14</sys_created_on>
+                        <sys_id>adde93ac974c4e503c2d3f56f053af23</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>markus.kraus</sys_updated_by>
+                        <sys_updated_on>2024-01-27 09:58:14</sys_updated_on>
+                        <value>report_widget_description</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>renderer</name>
+                        <portal_section display_value="Created 2024-01-27 10:58:14">e1de93ac974c4e503c2d3f56f053af23</portal_section>
+                        <sys_created_by>markus.kraus</sys_created_by>
+                        <sys_created_on>2024-01-27 09:58:14</sys_created_on>
+                        <sys_id>e9de93ac974c4e503c2d3f56f053af23</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>markus.kraus</sys_updated_by>
+                        <sys_updated_on>2024-01-27 09:58:14</sys_updated_on>
+                        <value>com.glide.ui.portal.RenderReport</value>
+                    </sys_portal_preferences>
+                </related_items_node>
+            </sys_portal>
+        </related_items_node>
+    </sys_portal_page>
+</record_update>
