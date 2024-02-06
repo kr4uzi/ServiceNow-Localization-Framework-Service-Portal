@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_376096_lfp_sp.PortalProcessor</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Script that is used while processing or translating an artifact</description>
+        <name>PortalProcessor</name>
+        <script><![CDATA[/* global global */
+/* global Class, GlideRecord */
+/* eslint no-undef: "error" */
+var PortalProcessor = Class.create();
+PortalProcessor.prototype = Object.extendsObject(global.LFArtifactProcessorSNC, {
+    category: 'localization_framework', // DO NOT REMOVE THIS LINE!
+
+    /**********
+     * Extracts the translatable content for the artifact record
+     * 
+     * @param params.tableName The table name of the artifact record
+     * @param params.sysId The sys_id of the artifact record 
+     * @param params.language Language into which the artifact has to be translated (Target language)
+     * @return LFDocumentContent object
+     **********/
+    getTranslatableContent: function(params) {
+        /**********
+         * Use LFDocumentContentBuilder to build the LFDocumentContent object
+         * Use the build() to return the LFDocumentContent object
+         **********/
+    },
+
+    /**********
+     * Uncomment the saveTranslatedContent function to override the default behavior of saving translations
+     * 
+     * @param documentContent LFDocumentContent object
+     * @return
+     **********/
+    /**********
+        saveTranslatedContent: function(documentContent) {},
+    **********/
+
+    type: 'PortalProcessor'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>markus.kraus</sys_created_by>
+        <sys_created_on>2024-01-27 08:00:38</sys_created_on>
+        <sys_id>8fd3c3a897c84e503c2d3f56f053af51</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>PortalProcessor</sys_name>
+        <sys_package display_value="Localization Framework+ Service Portal" source="x_376096_lfp_sp">2eaed92897044e503c2d3f56f053affe</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Localization Framework+ Service Portal">2eaed92897044e503c2d3f56f053affe</sys_scope>
+        <sys_update_name>sys_script_include_8fd3c3a897c84e503c2d3f56f053af51</sys_update_name>
+        <sys_updated_by>markus.kraus</sys_updated_by>
+        <sys_updated_on>2024-01-27 08:05:16</sys_updated_on>
+    </sys_script_include>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Localization Framework+ Service Portal">2eaed92897044e503c2d3f56f053affe</application>
+        <file_path/>
+        <instance_id>8e74c4eadba2f910caf99027c59619e3</instance_id>
+        <instance_name>dev217055</instance_name>
+        <name>sys_script_include_8fd3c3a897c84e503c2d3f56f053af51</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;
+    &lt;sys_script_include action="INSERT_OR_UPDATE"&gt;
+        &lt;access&gt;public&lt;/access&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;api_name&gt;x_376096_lfp_sp.PortalProcessor&lt;/api_name&gt;
+        &lt;caller_access/&gt;
+        &lt;client_callable&gt;false&lt;/client_callable&gt;
+        &lt;description&gt;Script that is used while processing or translating an artifact&lt;/description&gt;
+        &lt;name&gt;PortalProcessor&lt;/name&gt;
+        &lt;script&gt;&lt;![CDATA[/* global global */
+/* global Class, GlideRecord */
+/* eslint no-undef: "error" */
+var PortalProcessor = Class.create();
+PortalProcessor.prototype = Object.extendsObject(global.LFArtifactProcessorSNC, {
+    category: 'localization_framework', // DO NOT REMOVE THIS LINE!
+
+    /**********
+     * Extracts the translatable content for the artifact record
+     * 
+     * @param params.tableName The table name of the artifact record
+     * @param params.sysId The sys_id of the artifact record 
+     * @param params.language Language into which the artifact has to be translated (Target language)
+     * @return LFDocumentContent object
+     **********/
+    getTranslatableContent: function(params) {
+        /**********
+         * Use LFDocumentContentBuilder to build the LFDocumentContent object
+         * Use the build() to return the LFDocumentContent object
+         **********/
+    },
+
+    /**********
+     * Uncomment the saveTranslatedContent function to override the default behavior of saving translations
+     * 
+     * @param documentContent LFDocumentContent object
+     * @return
+     **********/
+    /**********
+        saveTranslatedContent: function(documentContent) {},
+    **********/
+
+    type: 'PortalProcessor'
+});]]&gt;&lt;/script&gt;
+        &lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;markus.kraus&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2024-01-27 08:00:38&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;8fd3c3a897c84e503c2d3f56f053af51&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;PortalProcessor&lt;/sys_name&gt;
+        &lt;sys_package display_value="Localization Framework+ Service Portal" source="x_376096_lfp_sp"&gt;2eaed92897044e503c2d3f56f053affe&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Localization Framework+ Service Portal"&gt;2eaed92897044e503c2d3f56f053affe&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;sys_script_include_8fd3c3a897c84e503c2d3f56f053af51&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;markus.kraus&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2024-01-27 08:05:16&lt;/sys_updated_on&gt;
+    &lt;/sys_script_include&gt;
+&lt;/record_update&gt;</payload>
+        <payload_hash>-1387784446</payload_hash>
+        <record_name>PortalProcessor</record_name>
+        <reverted_from/>
+        <source>1bc3cdc093d482101f07f5f08bba109c</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>markus.kraus</sys_created_by>
+        <sys_created_on>2024-02-06 19:39:41</sys_created_on>
+        <sys_id>94d3410493d482101f07f5f08bba1088</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18d7feeecc90000001</sys_recorded_at>
+        <sys_updated_by>markus.kraus</sys_updated_by>
+        <sys_updated_on>2024-02-06 19:39:41</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>90d34104bfd48210e65e16a1e0741388</update_guid>
+        <update_guid_history>90d34104bfd48210e65e16a1e0741388:0,c78349c0b8d482100bade1b775444081:440410509,2ad4f400535082101c38b34192967e57:-1387784446</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>markus.kraus</sys_created_by>
+        <sys_created_on>2024-02-06 19:41:54</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>14c976590af14cbea8fb564939f2e444</sys_id>
+        <sys_metadata>8fd3c3a897c84e503c2d3f56f053af51</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PortalProcessor</sys_name>
+        <sys_package display_value="Localization Framework+ Service Portal" source="x_376096_lfp_sp">2eaed92897044e503c2d3f56f053affe</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Localization Framework+ Service Portal">2eaed92897044e503c2d3f56f053affe</sys_scope>
+        <sys_scope_delete display_value="">2f0a729adc2f47748696acdb7d387890</sys_scope_delete>
+        <sys_update_name>sys_script_include_8fd3c3a897c84e503c2d3f56f053af51</sys_update_name>
+        <sys_update_version display_value="sys_script_include_8fd3c3a897c84e503c2d3f56f053af51">94d3410493d482101f07f5f08bba1088</sys_update_version>
+        <sys_updated_by>markus.kraus</sys_updated_by>
+        <sys_updated_on>2024-02-06 19:41:54</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
