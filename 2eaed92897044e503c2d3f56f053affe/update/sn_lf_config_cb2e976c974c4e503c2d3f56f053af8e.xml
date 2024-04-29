@@ -2,8 +2,8 @@
     <sn_lf_config action="INSERT_OR_UPDATE">
         <active>true</active>
         <generate_insights>true</generate_insights>
-        <internal_name>lfp_sp_page</internal_name>
-        <name>LF+ SP - Page</name>
+        <internal_name>lfp_sp_widget_instance</internal_name>
+        <name>Service Portal - Widget Instance</name>
         <processor_script display_value="PortalProcessor">6cce916897044e503c2d3f56f053af3f</processor_script>
         <read_script/>
         <save_script/>
@@ -11,14 +11,14 @@
         <sys_created_by>markus.kraus</sys_created_by>
         <sys_created_on>2024-01-27 09:55:19</sys_created_on>
         <sys_id>cb2e976c974c4e503c2d3f56f053af8e</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name>LF+ SP - Page</sys_name>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Service Portal - Widget Instance</sys_name>
         <sys_package display_value="Localization Framework+ Service Portal" source="x_376096_lfp_sp">2eaed92897044e503c2d3f56f053affe</sys_package>
         <sys_policy/>
         <sys_scope display_value="Localization Framework+ Service Portal">2eaed92897044e503c2d3f56f053affe</sys_scope>
         <sys_update_name>sn_lf_config_cb2e976c974c4e503c2d3f56f053af8e</sys_update_name>
         <sys_updated_by>markus.kraus</sys_updated_by>
-        <sys_updated_on>2024-02-06 19:41:12</sys_updated_on>
-        <table_name>sp_page</table_name>
+        <sys_updated_on>2024-04-29 01:44:55</sys_updated_on>
+        <table_name>sp_instance</table_name>
     </sn_lf_config>
 </record_update>

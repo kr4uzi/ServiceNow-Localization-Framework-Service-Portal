@@ -7,8 +7,8 @@
         <client_callable>false</client_callable>
         <description>Script that is used while processing or translating an artifact</description>
         <name>PortalProcessor</name>
-        <script><![CDATA[/* global global */
-/* global Class, GlideRecord, Set */
+        <script><![CDATA[/* global global, gs */
+/* global Class, GlideRecord, Set, GlideTableHierarchy */
 /* eslint no-undef: "error" */
 var PortalProcessor = Class.create();
 PortalProcessor.prototype = Object.extendsObject(global.LFArtifactProcessorSNC, {
@@ -28,8 +28,14 @@ PortalProcessor.prototype = Object.extendsObject(global.LFArtifactProcessorSNC, 
          * Use the build() to return the LFDocumentContent object
          **********/
 		const builder = new global.LFDocumentContentBuilder('v1', params.language, params.sysId, params.tableName, params);
-		if (params.tableName == 'sp_widget') {
+		
+		const widgetTables = new GlideTableHierarchy('sp_widget').getAllExtensions();
+		const instanceTables = new GlideTableHierarchy('sp_instance').getAllExtensions();
+		
+		if (widgetTables.indexOf(params.tableName) != -1) {
 			this.processWidget(params.sysId, builder);
+		} else if (instanceTables.indexOf(params.tableName) != -1) {
+			this.processWidgetInstance(params.sysId, builder);
 		} else if (params.tableName == 'sp_page') {
 			const widgetSysIDs = this.getWidgets(params.sysId);
 			for (let i = 0; i < widgetSysIDs.length; i++) {
@@ -114,13 +120,39 @@ PortalProcessor.prototype = Object.extendsObject(global.LFArtifactProcessorSNC, 
 		}
 	},
 	
+	processWidgetInstance: function(instanceSysID, builder) {
+		const instanceGr = new GlideRecord('sp_instance');
+		instanceGr.query('sys_id', instanceSysID);
+		instanceGr.setLimit(1);
+		instanceGr.query();
+		if (instanceGr.next()) {
+			const messages = this._processHTML(instanceGr.widget_parameters.toString());
+			if (messages == null) {
+				gs.error('LF+ SP: Too many iterations while processing HTML for instance ' + instanceGr.getDisplayValue() + ' (' + instanceGr.sys_id + ')');
+			} else {
+				const htmlLabel = instanceGr.widget_parameters.getLabel();
+				const widgetName = instanceGr.getDisplayValue();
+				builder.processStringArray(messages, htmlLabel + ': ' + widgetName, htmlLabel);
+			}
+			
+			builder.processTranslatableFieldsForSingleRecord(instanceGr, 'Widget Instance');
+		}
+	},
+	
 	processWidget: function(widgetSysID, builder) {
 		const widgetGr = new GlideRecord('sp_widget');
 		widgetGr.query('sys_id', widgetSysID);
 		widgetGr.setLimit(1);
 		widgetGr.query();
 		if (widgetGr.next()) {
-			processHTML(widgetGr, builder);
+			const messages = this._processHTML(widgetGr.template.toString());
+			if (messages == null) {
+				gs.error('LF+ SP: Too many iterations while processing HTML for widget ' + widgetGr.getDisplayValue() + ' (' + widgetGr.sys_id + ')');
+			} else {
+				const htmlLabel = widgetGr.template.getLabel();
+				const widgetName = widgetGr.getDisplayValue();
+				builder.processStringArray(messages, htmlLabel + ': ' + widgetName, htmlLabel);
+			}
 			
 			const widgetName = widgetGr.getDisplayValue();
 			// Server script and Client controller simply have to translate gs.getMessage / i18n.getMessage
@@ -130,24 +162,38 @@ PortalProcessor.prototype = Object.extendsObject(global.LFArtifactProcessorSNC, 
 				builder.processScript(element.toString(), label + ': ' + widgetName, label);
 			});
 		}
-		
-		function processHTML(widgetGr, builder) {
-			// in-place translations via ${ MESSAGE } in 'Body HTML template'
-			const html = widgetGr.template.toString();
-			const messageRegex = /\${\s*([^]*?)\s*}/g;
-			let messages = [];
-			let match = null;
-			while ((match = messageRegex.exec(html)) != null) {
-				const msg = match[1];
-				if (!msg.includes(msg)) {
-					messages.push(match[1]);
-				}
+	},
+	
+	_processHTML: function (html, builder) {
+		// in-place translations via ${ MESSAGE {{DATA-BINDING}} } in 'Body HTML template'
+		let i = html.indexOf('${'); let count = 0;
+		let pcount = 0;
+		let start = 0;
+		const messages = [];
+		while (i < html.length && i != -1) {
+			if (count++ > html.length) {
+				return null;
 			}
-			
-			const htmlLabel = widgetGr.template.getLabel();
-			const widgetName = widgetGr.getDisplayValue();
-			builder.processStringArray(messages, htmlLabel + ': ' + widgetName, htmlLabel);
+
+			if (html[i] == '$' && html[i + 1] == '{' && (++pcount == 1)) {
+				// beginning of message
+				// Note: This won't throw if (i + 1) is out of bounds
+				i += 2;
+				start = i;
+			} else if (html[i] == '{' && pcount > 0) {
+				// regular open brace (only registered when we've started parsing)
+				pcount++;
+				i++;
+			} else if (html[i] == '}' && pcount > 0 && (--pcount == 0)) {
+				// if all braces closed, message is fully parsed
+				messages.push(html.substring(start, i));
+				i = html.indexOf('${', i);
+			} else {
+				i++;
+			}
 		}
+
+		return [...new Set(messages)];
 	},
 
     /**********
@@ -166,13 +212,13 @@ PortalProcessor.prototype = Object.extendsObject(global.LFArtifactProcessorSNC, 
         <sys_created_by>markus.kraus</sys_created_by>
         <sys_created_on>2024-01-27 00:39:19</sys_created_on>
         <sys_id>6cce916897044e503c2d3f56f053af3f</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_name>PortalProcessor</sys_name>
         <sys_package display_value="Localization Framework+ Service Portal" source="x_376096_lfp_sp">2eaed92897044e503c2d3f56f053affe</sys_package>
         <sys_policy/>
         <sys_scope display_value="Localization Framework+ Service Portal">2eaed92897044e503c2d3f56f053affe</sys_scope>
         <sys_update_name>sys_script_include_6cce916897044e503c2d3f56f053af3f</sys_update_name>
         <sys_updated_by>markus.kraus</sys_updated_by>
-        <sys_updated_on>2024-02-06 19:14:53</sys_updated_on>
+        <sys_updated_on>2024-04-29 02:19:52</sys_updated_on>
     </sys_script_include>
 </record_update>

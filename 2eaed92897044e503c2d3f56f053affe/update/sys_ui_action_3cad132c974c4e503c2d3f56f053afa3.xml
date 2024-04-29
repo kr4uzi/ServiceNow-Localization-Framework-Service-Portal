@@ -7,7 +7,7 @@
 
 }]]></client_script_v2>
         <comments/>
-        <condition>new global.LFUtils().showUIAction('lfp_sp_page')</condition>
+        <condition>new global.LFUtils().showUIAction('lfp_sp_widget_instance')</condition>
         <form_action>true</form_action>
         <form_button>true</form_button>
         <form_button_v2>false</form_button_v2>
@@ -30,7 +30,7 @@
         <name>Edit Translations</name>
         <onclick/>
         <order>100</order>
-        <script><![CDATA[var redirectURL = 'sn_lf_comparison_ui.do?&sysparm_caller_mode=adhoc&sysparm_enable_lang_picker=true&sysparm_artifact_internal_name=lfp_sp_page';
+        <script><![CDATA[var redirectURL = 'sn_lf_comparison_ui.do?&sysparm_caller_mode=adhoc&sysparm_enable_lang_picker=true&sysparm_artifact_internal_name=lfp_sp_widget_instance';
 redirectURL = redirectURL + '&sysparm_artifact_sys_id=' + current.getUniqueValue();
 redirectURL = redirectURL + '&sysparm_source_language=' + new global.LFUtils().getDefaultSourceLanguage();
 redirectURL = redirectURL + "&sysparm_page_title=" + gs.getMessage('Translate {0}', current.getDisplayValue());
@@ -45,7 +45,7 @@ gs.setRedirect(redirectURL);]]></script>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>3cad132c974c4e503c2d3f56f053afa3</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Edit Translations</sys_name>
         <sys_overrides/>
         <sys_package display_value="Localization Framework+ Service Portal" source="x_376096_lfp_sp">2eaed92897044e503c2d3f56f053affe</sys_package>
@@ -53,19 +53,9 @@ gs.setRedirect(redirectURL);]]></script>
         <sys_scope display_value="Localization Framework+ Service Portal">2eaed92897044e503c2d3f56f053affe</sys_scope>
         <sys_update_name>sys_ui_action_3cad132c974c4e503c2d3f56f053afa3</sys_update_name>
         <sys_updated_by>markus.kraus</sys_updated_by>
-        <sys_updated_on>2024-01-27 09:52:59</sys_updated_on>
-        <table>sp_page</table>
+        <sys_updated_on>2024-04-29 01:53:18</sys_updated_on>
+        <table>sp_instance</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
-        <x_376096_pxp_client_script><![CDATA[/* eslint no-undef: "error" */
-function onClick(g_form) {
-
-    // Activate the "Template Bar" (... - Button on the top right)
-    // for some example scripts
-
-}]]></x_376096_pxp_client_script>
-        <x_376096_pxp_enabled>false</x_376096_pxp_enabled>
-        <x_376096_pxp_list_disabled_condition/>
-        <x_376096_pxp_list_label/>
     </sys_ui_action>
 </record_update>

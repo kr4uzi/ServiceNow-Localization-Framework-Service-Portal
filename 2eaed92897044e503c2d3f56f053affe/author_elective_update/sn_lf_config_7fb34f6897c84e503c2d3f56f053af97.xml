@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_lf_config">
+    <sn_lf_config action="DELETE">
+        <active>false</active>
+        <generate_insights>true</generate_insights>
+        <internal_name>lfp_sp_portal</internal_name>
+        <name>Service Portal - Portal</name>
+        <processor_script display_value="PortalProcessor">6cce916897044e503c2d3f56f053af3f</processor_script>
+        <read_script/>
+        <save_script/>
+        <sys_class_name>sn_lf_config</sys_class_name>
+        <sys_created_by>markus.kraus</sys_created_by>
+        <sys_created_on>2024-01-27 08:01:08</sys_created_on>
+        <sys_id>7fb34f6897c84e503c2d3f56f053af97</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Service Portal - Portal</sys_name>
+        <sys_package display_value="Localization Framework+ Service Portal" source="x_376096_lfp_sp">2eaed92897044e503c2d3f56f053affe</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Localization Framework+ Service Portal">2eaed92897044e503c2d3f56f053affe</sys_scope>
+        <sys_update_name>sn_lf_config_7fb34f6897c84e503c2d3f56f053af97</sys_update_name>
+        <sys_updated_by>markus.kraus</sys_updated_by>
+        <sys_updated_on>2024-02-10 07:50:23</sys_updated_on>
+        <table_name>sp_portal</table_name>
+    </sn_lf_config>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Localization Framework+ Service Portal">2eaed92897044e503c2d3f56f053affe</application>
+        <file_path/>
+        <instance_id>8e74c4eadba2f910caf99027c59619e3</instance_id>
+        <instance_name>dev217055</instance_name>
+        <name>sn_lf_config_7fb34f6897c84e503c2d3f56f053af97</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_lf_config"><sn_lf_config action="INSERT_OR_UPDATE"><active>false</active><generate_insights>true</generate_insights><internal_name>lfp_sp_portal</internal_name><name>Service Portal - Portal</name><processor_script display_value="PortalProcessor">6cce916897044e503c2d3f56f053af3f</processor_script><read_script/><save_script/><sys_class_name>sn_lf_config</sys_class_name><sys_created_by>markus.kraus</sys_created_by><sys_created_on>2024-01-27 08:01:08</sys_created_on><sys_id>7fb34f6897c84e503c2d3f56f053af97</sys_id><sys_mod_count>3</sys_mod_count><sys_name>Service Portal - Portal</sys_name><sys_package display_value="Localization Framework+ Service Portal" source="x_376096_lfp_sp">2eaed92897044e503c2d3f56f053affe</sys_package><sys_policy/><sys_scope display_value="Localization Framework+ Service Portal">2eaed92897044e503c2d3f56f053affe</sys_scope><sys_update_name>sn_lf_config_7fb34f6897c84e503c2d3f56f053af97</sys_update_name><sys_updated_by>markus.kraus</sys_updated_by><sys_updated_on>2024-02-10 07:50:23</sys_updated_on><table_name>sp_portal</table_name></sn_lf_config></record_update>]]></payload>
+        <payload_hash>-1224504313</payload_hash>
+        <record_name>Service Portal - Portal</record_name>
+        <reverted_from/>
+        <source>3b87cf45939002101f07f5f08bba10ae</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>markus.kraus</sys_created_by>
+        <sys_created_on>2024-02-10 07:50:23</sys_created_on>
+        <sys_id>c5d7cf09939002101f07f5f08bba100c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18d91fefa560000001</sys_recorded_at>
+        <sys_updated_by>markus.kraus</sys_updated_by>
+        <sys_updated_on>2024-02-10 07:50:23</sys_updated_on>
+        <type>Artifact Configuration</type>
+        <update_guid>8dd7cf097e900210d125d4020d53d30b</update_guid>
+        <update_guid_history>8dd7cf097e900210d125d4020d53d30b:-1224504313,0ba70349b790021005099a20a146d3dc:297961777,d1640584f7d4821073de3b655a269588:1210709770,78548d042ed48210b54d223e48901a6b:0,0ad4b400a650821053dffccf7706fb8a:1195475453</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Service Portal - Portal">37d9ecea933502101f07f5f08bba10a1</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>markus.kraus</sys_created_by>
+        <sys_created_on>2024-04-29 01:45:19</sys_created_on>
+        <sys_db_object display_value="" name="sn_lf_config">sn_lf_config</sys_db_object>
+        <sys_id>4fdd113c1bce417b8af2af95e8fede21</sys_id>
+        <sys_metadata>7fb34f6897c84e503c2d3f56f053af97</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Service Portal - Portal</sys_name>
+        <sys_package display_value="Localization Framework+ Service Portal" source="x_376096_lfp_sp">2eaed92897044e503c2d3f56f053affe</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Localization Framework+ Service Portal">2eaed92897044e503c2d3f56f053affe</sys_scope>
+        <sys_scope_delete display_value="">2f0a729adc2f47748696acdb7d387890</sys_scope_delete>
+        <sys_update_name>sn_lf_config_7fb34f6897c84e503c2d3f56f053af97</sys_update_name>
+        <sys_update_version display_value="sn_lf_config_7fb34f6897c84e503c2d3f56f053af97">c5d7cf09939002101f07f5f08bba100c</sys_update_version>
+        <sys_updated_by>markus.kraus</sys_updated_by>
+        <sys_updated_on>2024-04-29 01:45:19</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

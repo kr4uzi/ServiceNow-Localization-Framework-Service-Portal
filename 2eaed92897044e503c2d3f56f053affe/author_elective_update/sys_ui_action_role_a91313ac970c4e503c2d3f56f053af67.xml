@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_action_role">
+    <sys_ui_action_role action="DELETE">
+        <sys_class_name>sys_ui_action_role</sys_class_name>
+        <sys_created_by>markus.kraus</sys_created_by>
+        <sys_created_on>2024-01-27 09:07:03</sys_created_on>
+        <sys_id>a91313ac970c4e503c2d3f56f053af67</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Request Translations.localization_requestor</sys_name>
+        <sys_package display_value="Localization Framework+ Service Portal" source="x_376096_lfp_sp">2eaed92897044e503c2d3f56f053affe</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Localization Framework+ Service Portal">2eaed92897044e503c2d3f56f053affe</sys_scope>
+        <sys_ui_action display_value="Request Translations">670317ac970c4e503c2d3f56f053af67</sys_ui_action>
+        <sys_update_name>sys_ui_action_role_a91313ac970c4e503c2d3f56f053af67</sys_update_name>
+        <sys_updated_by>markus.kraus</sys_updated_by>
+        <sys_updated_on>2024-01-27 09:51:01</sys_updated_on>
+        <sys_user_role display_value="localization_requestor" name="localization_requestor">9db1dc6e53be101063a2ddeeff7b1258</sys_user_role>
+    </sys_ui_action_role>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Localization Framework+ Service Portal">2eaed92897044e503c2d3f56f053affe</application>
+        <file_path/>
+        <instance_id>8e74c4eadba2f910caf99027c59619e3</instance_id>
+        <instance_name>dev217055</instance_name>
+        <name>sys_ui_action_role_a91313ac970c4e503c2d3f56f053af67</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_action_role">
+    <sys_ui_action_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_ui_action_role</sys_class_name>
+        <sys_created_by>markus.kraus</sys_created_by>
+        <sys_created_on>2024-01-27 09:07:03</sys_created_on>
+        <sys_id>a91313ac970c4e503c2d3f56f053af67</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Request Translations.localization_requestor</sys_name>
+        <sys_package display_value="Localization Framework+ Service Portal" source="x_376096_lfp_sp">2eaed92897044e503c2d3f56f053affe</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Localization Framework+ Service Portal">2eaed92897044e503c2d3f56f053affe</sys_scope>
+        <sys_ui_action display_value="Request Translations">670317ac970c4e503c2d3f56f053af67</sys_ui_action>
+        <sys_update_name>sys_ui_action_role_a91313ac970c4e503c2d3f56f053af67</sys_update_name>
+        <sys_updated_by>markus.kraus</sys_updated_by>
+        <sys_updated_on>2024-01-27 09:51:01</sys_updated_on>
+        <sys_user_role display_value="localization_requestor" name="localization_requestor">9db1dc6e53be101063a2ddeeff7b1258</sys_user_role>
+    </sys_ui_action_role>
+</record_update>]]></payload>
+        <payload_hash>349619137</payload_hash>
+        <record_name>Request Translations.localization_requestor</record_name>
+        <reverted_from/>
+        <source>1bc3cdc093d482101f07f5f08bba109c</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>markus.kraus</sys_created_by>
+        <sys_created_on>2024-02-06 19:39:41</sys_created_on>
+        <sys_id>18d3410493d482101f07f5f08bba10e0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18d7feeeeee0000001</sys_recorded_at>
+        <sys_updated_by>markus.kraus</sys_updated_by>
+        <sys_updated_on>2024-02-06 19:39:41</sys_updated_on>
+        <type>UI Action Role</type>
+        <update_guid>14d34104aad48210dfc5898b3854dde0</update_guid>
+        <update_guid_history>14d34104aad48210dfc5898b3854dde0:0,be8349c0a6d482104ce5f1295e39721d:1618957972,6ad4f40027508210fe44e5ef3ad2ee9a:349619137</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>markus.kraus</sys_created_by>
+        <sys_created_on>2024-04-29 01:52:43</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_action_role">sys_ui_action_role</sys_db_object>
+        <sys_id>8059b69c237f43939b34a083f358b691</sys_id>
+        <sys_metadata>a91313ac970c4e503c2d3f56f053af67</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Request Translations.localization_requestor</sys_name>
+        <sys_package display_value="Localization Framework+ Service Portal" source="x_376096_lfp_sp">2eaed92897044e503c2d3f56f053affe</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Localization Framework+ Service Portal">2eaed92897044e503c2d3f56f053affe</sys_scope>
+        <sys_scope_delete display_value="">2f0a729adc2f47748696acdb7d387890</sys_scope_delete>
+        <sys_update_name>sys_ui_action_role_a91313ac970c4e503c2d3f56f053af67</sys_update_name>
+        <sys_update_version display_value="sys_ui_action_role_a91313ac970c4e503c2d3f56f053af67">18d3410493d482101f07f5f08bba10e0</sys_update_version>
+        <sys_updated_by>markus.kraus</sys_updated_by>
+        <sys_updated_on>2024-04-29 01:52:43</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
