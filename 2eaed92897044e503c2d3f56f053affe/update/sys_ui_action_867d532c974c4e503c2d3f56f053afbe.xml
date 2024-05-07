@@ -18,25 +18,40 @@
         <format_for_configurable_workspace>false</format_for_configurable_workspace>
         <hint/>
         <isolate_script>true</isolate_script>
-        <list_action>false</list_action>
+        <list_action>true</list_action>
         <list_banner_button>false</list_banner_button>
         <list_button>false</list_button>
-        <list_choice>false</list_choice>
+        <list_choice>true</list_choice>
         <list_context_menu>false</list_context_menu>
         <list_link>false</list_link>
         <list_save_with_form_button>false</list_save_with_form_button>
         <list_style/>
-        <messages/>
+        <messages>Request Translations</messages>
         <name>Request Translations</name>
         <onclick>lfp_sp_requestTranslations()</onclick>
         <order>100</order>
         <script><![CDATA[function lfp_sp_requestTranslations() {
+	var requestType = '';
+	var sysID = '';
+	
+	if (typeof g_list != 'undefined') {
+		requestType = 'list';
+		sysID = g_list.getChecked();
+	} else {
+		requestType = 'form';
+		sysID = g_form.getUniqueValue();
+	}
+	
+	if (!sysID) {
+		return;
+	}
+	
 	// https://docs.servicenow.com/csh?topicname=create-ui-action-artifact.html&version=latest
 	var dlg = new GlideModal("sn_lf_language_picker");
     dlg.setTitle(getMessage("Request Translations"));
-    dlg.setPreference("sys_id", g_form.getUniqueValue());
+    dlg.setPreference("sys_id", sysID);
     dlg.setPreference("artifact_config_internal_name", "lfp_sp_widget_instance");
-    dlg.setPreference("request_type", "form");
+    dlg.setPreference("request_type", requestType);
     dlg.setPreference("focusTrap", true);
     dlg.render();
 }]]></script>
@@ -50,7 +65,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>867d532c974c4e503c2d3f56f053afbe</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Request Translations</sys_name>
         <sys_overrides/>
         <sys_package display_value="Localization Framework+ Service Portal" source="x_376096_lfp_sp">2eaed92897044e503c2d3f56f053affe</sys_package>
@@ -58,7 +73,7 @@
         <sys_scope display_value="Localization Framework+ Service Portal">2eaed92897044e503c2d3f56f053affe</sys_scope>
         <sys_update_name>sys_ui_action_867d532c974c4e503c2d3f56f053afbe</sys_update_name>
         <sys_updated_by>markus.kraus</sys_updated_by>
-        <sys_updated_on>2024-04-29 01:52:24</sys_updated_on>
+        <sys_updated_on>2024-05-07 18:13:35</sys_updated_on>
         <table>sp_instance</table>
         <ui11_compatible>false</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
