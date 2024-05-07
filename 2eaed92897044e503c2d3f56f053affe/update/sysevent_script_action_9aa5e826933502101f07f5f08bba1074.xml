@@ -17,18 +17,15 @@
 				}
 			};
 
-			const activeArtifacts = [];
 			const configGr = new GlideRecord('sn_lf_config');
 			configGr.addQuery('active', true);
 			configGr.addQuery('sys_scope.scope', 'x_376096_lfp_sp');
 			configGr.query();
 			while (configGr.next()) {
-				activeArtifacts.push(configGr.getValue('table_name'));
-				generator.generateInsightsForConfigRecord(configGr);
+				if (configGr.sys_scope.scope == 'x_376096_lfp_sp') {
+					generator.generateInsightsForConfigRecord(configGr);
+				}
 			}
-
-			generator._deleteStaleInsights(activeArtifacts);
-
 		} catch (e) {
 			gs.error('LF+ SP: Error occurred while running GenerateLocalizationInsights scheduled job: ' + e);
 		}
@@ -47,7 +44,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>9aa5e826933502101f07f5f08bba1074</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>LF+ SP - Generate Insights</sys_name>
         <sys_overrides/>
         <sys_package display_value="Localization Framework+ Service Portal" source="x_376096_lfp_sp">2eaed92897044e503c2d3f56f053affe</sys_package>
@@ -55,6 +52,6 @@
         <sys_scope display_value="Localization Framework+ Service Portal">2eaed92897044e503c2d3f56f053affe</sys_scope>
         <sys_update_name>sysevent_script_action_9aa5e826933502101f07f5f08bba1074</sys_update_name>
         <sys_updated_by>markus.kraus</sys_updated_by>
-        <sys_updated_on>2024-04-29 01:41:27</sys_updated_on>
+        <sys_updated_on>2024-05-06 16:12:55</sys_updated_on>
     </sysevent_script_action>
 </record_update>
