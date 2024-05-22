@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_grid_canvas_pane">
     <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
         <grid_canvas display_value="PA LF+ SP - Pages">aaae13ac974c4e503c2d3f56f053af49</grid_canvas>
-        <height>3</height>
-        <portal_widget display_value="Created 2024-01-27 10:57:50">77be93ac974c4e503c2d3f56f053af81</portal_widget>
-        <posx>6</posx>
-        <posy>4</posy>
+        <height>9</height>
+        <portal_widget display_value="Created 2024-05-22 09:42:22">12285406931642101f07f5f08bba1056</portal_widget>
+        <posx>0</posx>
+        <posy>10</posy>
         <sys_class_name>sys_grid_canvas_pane</sys_class_name>
         <sys_created_by>markus.kraus</sys_created_by>
-        <sys_created_on>2024-01-27 09:57:50</sys_created_on>
-        <sys_id>7fbe93ac974c4e503c2d3f56f053af82</sys_id>
-        <sys_mod_count>34</sys_mod_count>
+        <sys_created_on>2024-05-22 07:42:22</sys_created_on>
+        <sys_id>da285406931642101f07f5f08bba1057</sys_id>
+        <sys_mod_count>24</sys_mod_count>
         <sys_name>aaae13ac974c4e503c2d3f56f053af49</sys_name>
         <sys_package display_value="Localization Framework+ Service Portal" source="x_376096_lfp_sp">2eaed92897044e503c2d3f56f053affe</sys_package>
         <sys_policy/>
         <sys_scope display_value="Localization Framework+ Service Portal">2eaed92897044e503c2d3f56f053affe</sys_scope>
-        <sys_update_name>sys_grid_canvas_pane_7fbe93ac974c4e503c2d3f56f053af82</sys_update_name>
+        <sys_update_name>sys_grid_canvas_pane_da285406931642101f07f5f08bba1057</sys_update_name>
         <sys_updated_by>markus.kraus</sys_updated_by>
         <sys_updated_on>2024-05-22 10:59:24</sys_updated_on>
-        <width>2</width>
+        <width>12</width>
     </sys_grid_canvas_pane>
 </record_update>

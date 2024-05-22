@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_grid_canvas_pane">
+    <sys_grid_canvas_pane action="DELETE">
+        <grid_canvas display_value="PA LF+ SP - Pages">aaae13ac974c4e503c2d3f56f053af49</grid_canvas>
+        <height>10</height>
+        <portal_widget display_value="Created 2024-05-22 12:46:51">6862c10a93d642101f07f5f08bba1037</portal_widget>
+        <posx>0</posx>
+        <posy>0</posy>
+        <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+        <sys_created_by>markus.kraus</sys_created_by>
+        <sys_created_on>2024-05-22 10:46:51</sys_created_on>
+        <sys_id>7462c10a93d642101f07f5f08bba103a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>aaae13ac974c4e503c2d3f56f053af49</sys_name>
+        <sys_package display_value="Localization Framework+ Service Portal" source="x_376096_lfp_sp">2eaed92897044e503c2d3f56f053affe</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Localization Framework+ Service Portal">2eaed92897044e503c2d3f56f053affe</sys_scope>
+        <sys_update_name>sys_grid_canvas_pane_7462c10a93d642101f07f5f08bba103a</sys_update_name>
+        <sys_updated_by>markus.kraus</sys_updated_by>
+        <sys_updated_on>2024-05-22 10:46:51</sys_updated_on>
+        <width>12</width>
+    </sys_grid_canvas_pane>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Localization Framework+ Service Portal">2eaed92897044e503c2d3f56f053affe</application>
+        <file_path/>
+        <instance_id>8e74c4eadba2f910caf99027c59619e3</instance_id>
+        <instance_name>dev217055</instance_name>
+        <name>sys_grid_canvas_pane_7462c10a93d642101f07f5f08bba103a</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_grid_canvas_pane"><sys_grid_canvas_pane action="INSERT_OR_UPDATE"><grid_canvas display_value="PA LF+ SP - Pages">aaae13ac974c4e503c2d3f56f053af49</grid_canvas><height>10</height><portal_widget display_value="Created 2024-05-22 12:46:51">6862c10a93d642101f07f5f08bba1037</portal_widget><posx>0</posx><posy>0</posy><sys_class_name>sys_grid_canvas_pane</sys_class_name><sys_created_by>markus.kraus</sys_created_by><sys_created_on>2024-05-22 10:46:51</sys_created_on><sys_id>7462c10a93d642101f07f5f08bba103a</sys_id><sys_mod_count>0</sys_mod_count><sys_name>aaae13ac974c4e503c2d3f56f053af49</sys_name><sys_package display_value="Localization Framework+ Service Portal" source="x_376096_lfp_sp">2eaed92897044e503c2d3f56f053affe</sys_package><sys_policy/><sys_scope display_value="Localization Framework+ Service Portal">2eaed92897044e503c2d3f56f053affe</sys_scope><sys_update_name>sys_grid_canvas_pane_7462c10a93d642101f07f5f08bba103a</sys_update_name><sys_updated_by>markus.kraus</sys_updated_by><sys_updated_on>2024-05-22 10:46:51</sys_updated_on><width>12</width></sys_grid_canvas_pane></record_update>]]></payload>
+        <payload_hash>-877650859</payload_hash>
+        <record_name>aaae13ac974c4e503c2d3f56f053af49</record_name>
+        <reverted_from/>
+        <source>3b87cf45939002101f07f5f08bba10ae</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>markus.kraus</sys_created_by>
+        <sys_created_on>2024-05-22 10:46:51</sys_created_on>
+        <sys_id>b862c10a93d642101f07f5f08bba103c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18f9fe933530000001</sys_recorded_at>
+        <sys_updated_by>markus.kraus</sys_updated_by>
+        <sys_updated_on>2024-05-22 10:46:51</sys_updated_on>
+        <type>Grid Canvas Pane</type>
+        <update_guid>fc62c10a0dd642101537f33e56c0953b</update_guid>
+        <update_guid_history>fc62c10a0dd642101537f33e56c0953b:-877650859</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>markus.kraus</sys_created_by>
+        <sys_created_on>2024-05-22 10:46:59</sys_created_on>
+        <sys_db_object display_value="" name="sys_grid_canvas_pane">sys_grid_canvas_pane</sys_db_object>
+        <sys_id>35602a4e2dc84338916da08c03a20640</sys_id>
+        <sys_metadata>7462c10a93d642101f07f5f08bba103a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>aaae13ac974c4e503c2d3f56f053af49</sys_name>
+        <sys_package display_value="Localization Framework+ Service Portal" source="x_376096_lfp_sp">2eaed92897044e503c2d3f56f053affe</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Localization Framework+ Service Portal">2eaed92897044e503c2d3f56f053affe</sys_scope>
+        <sys_scope_delete display_value="">2f0a729adc2f47748696acdb7d387890</sys_scope_delete>
+        <sys_update_name>sys_grid_canvas_pane_7462c10a93d642101f07f5f08bba103a</sys_update_name>
+        <sys_update_version display_value="sys_grid_canvas_pane_7462c10a93d642101f07f5f08bba103a">b862c10a93d642101f07f5f08bba103c</sys_update_version>
+        <sys_updated_by>markus.kraus</sys_updated_by>
+        <sys_updated_on>2024-05-22 10:46:59</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>jobs_execution_tracker</collection>
+        <condition/>
+        <description>Generate Service Portal insights for artefacts without an 'active' field - the OOTB Insight Generation only supports tables with such a field, therefore the a slight tweak has to be made to also support those tables.
+Note: This UI Action runs "before" so that the OOTB job is finished only after the custom insights are also generated!</description>
+        <execute_function>false</execute_function>
+        <filter_condition table="jobs_execution_tracker">job=7faaf593c7031010dd7ab6c427c26075^stateCHANGESTO2^EQ<item display_table="sysauto_script" display_value="sn_lf_GenerateLocalizationInsightsRecords" endquery="false" field="job" goto="false" newquery="false" operator="=" or="false" value="7faaf593c7031010dd7ab6c427c26075"/>
+            <item display_value="Completed" endquery="false" field="state" goto="false" newquery="false" operator="CHANGESTO" or="false" value="2"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>LF+ SP - Generate Portal Insights</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	const generator = new global.LFGenerateLocalizationInsights();
+	try {
+		// Note: This function replicates the LFGenerateLocalizationInsights::generateInsights
+		// which is executed by the scheduled job 'sn_lf_GenerateLocalizationInsightsRecords'
+		// and also by the UI Action 'Generate Insights Records'.
+		// Unfortunately this function only works properly for records with an active field
+		// (specialization for some other tables are directly in the _isArtifactActive function -
+		// which should not be touched), therefore we add the insight generation to this function
+		// and enable it by overriding the "_isArtifactActive" check
+		generator._isArtifactActive = function (artifactGR, internalName) {
+			if (internalName.startsWith('lfp_sp')) {
+				return true;
+			}
+		};
+
+		const configGr = new GlideRecord('sn_lf_config');
+		configGr.addQuery('active', true);
+		configGr.addQuery('sys_scope.scope', 'x_376096_lfp_sp');
+		configGr.query();
+		while (configGr.next()) {			
+			if (configGr.sys_scope.scope == 'x_376096_lfp_sp' && !hasActiveFlag(configGr.table_name)) {
+				generator.generateInsightsForConfigRecord(configGr);
+			}
+		}
+		
+		// Note: OOTB there is some stale-insights cleanup, but this picks up all insights -
+		// regardless if an active flag exists or not, so we do not have to do another cleanup
+	} catch (e) {
+		gs.error('LF+ SP: Error occurred while running GenerateLocalizationInsights scheduled job: ' + e);
+	} finally {
+		// replicate JobsExecutionTrackerAPI::endJob
+		const now = new GlideDateTime();
+		current.execution_time = GlideDateTime.subtract(new GlideDateTime(current.start_time), now);
+		current.end_time = now;
+	}
+	
+	function hasActiveFlag(tableName) {
+		const dictionaryGr = new GlideRecordSecure('sys_dictionary');
+		dictionaryGr.addQuery('name', 'IN', new GlideTableHierarchy(tableName).getTables());
+		dictionaryGr.addQuery('element', 'active');
+		dictionaryGr.setLimit(1);
+		dictionaryGr.query();
+		return dictionaryGr.hasNext();
+	}
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>markus.kraus</sys_created_by>
+        <sys_created_on>2024-05-22 08:44:23</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>24f56846935642101f07f5f08bba10dc</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>LF+ SP - Generate Portal Insights</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Localization Framework+ Service Portal" source="x_376096_lfp_sp">2eaed92897044e503c2d3f56f053affe</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Localization Framework+ Service Portal">2eaed92897044e503c2d3f56f053affe</sys_scope>
+        <sys_update_name>sys_script_24f56846935642101f07f5f08bba10dc</sys_update_name>
+        <sys_updated_by>markus.kraus</sys_updated_by>
+        <sys_updated_on>2024-05-22 10:56:08</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=24f56846935642101f07f5f08bba10dc"/>
+</record_update>
