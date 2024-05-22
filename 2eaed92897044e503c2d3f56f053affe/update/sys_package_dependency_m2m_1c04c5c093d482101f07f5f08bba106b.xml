@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
+    <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
+        <dependency display_value="Localization Framework" source="com.glide.localization_framework">187eb80c935082101f07f5f08bba106f</dependency>
+        <min_version>1.0.0</min_version>
+        <sys_created_by>markus.kraus</sys_created_by>
+        <sys_created_on>2024-02-06 19:40:30</sys_created_on>
+        <sys_id>1c04c5c093d482101f07f5f08bba106b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_package display_value="Localization Framework+ Service Portal" source="x_376096_lfp_sp">2eaed92897044e503c2d3f56f053affe</sys_package>
+        <sys_updated_by>markus.kraus</sys_updated_by>
+        <sys_updated_on>2024-02-06 19:40:30</sys_updated_on>
+    </sys_package_dependency_m2m>
+</record_update>

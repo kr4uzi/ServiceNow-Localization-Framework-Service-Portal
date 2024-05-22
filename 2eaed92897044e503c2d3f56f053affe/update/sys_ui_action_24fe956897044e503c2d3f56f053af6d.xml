@@ -57,15 +57,5 @@ gs.setRedirect(redirectURL);]]></script>
         <table>sp_widget</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
-        <x_376096_pxp_client_script><![CDATA[/* eslint no-undef: "error" */
-function onClick(g_form) {
-
-    // Activate the "Template Bar" (... - Button on the top right)
-    // for some example scripts
-
-}]]></x_376096_pxp_client_script>
-        <x_376096_pxp_enabled>false</x_376096_pxp_enabled>
-        <x_376096_pxp_list_disabled_condition/>
-        <x_376096_pxp_list_label/>
     </sys_ui_action>
 </record_update>

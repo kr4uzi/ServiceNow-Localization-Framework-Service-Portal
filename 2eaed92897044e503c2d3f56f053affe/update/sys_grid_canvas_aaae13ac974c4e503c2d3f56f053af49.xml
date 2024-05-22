@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_grid_canvas">
     <sys_grid_canvas action="INSERT_OR_UPDATE">
-        <legacy_page display_value="PA LF+ SP - Pages">eaae13ac974c4e503c2d3f56f053af48</legacy_page>
+        <legacy_page display_value="PA Portal">eaae13ac974c4e503c2d3f56f053af48</legacy_page>
         <name>PA LF+ SP - Pages</name>
         <sys_class_name>sys_grid_canvas</sys_class_name>
         <sys_created_by>markus.kraus</sys_created_by>

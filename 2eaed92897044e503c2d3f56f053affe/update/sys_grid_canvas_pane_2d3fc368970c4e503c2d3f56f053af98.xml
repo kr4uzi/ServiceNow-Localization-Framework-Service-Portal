@@ -2,7 +2,7 @@
     <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
         <grid_canvas display_value="PA LF+ SP - Portals">cf754f2c97c84e503c2d3f56f053af24</grid_canvas>
         <height>4</height>
-        <portal_widget display_value="Created 2024-01-27 09:49:57">e13fc368970c4e503c2d3f56f053af97</portal_widget>
+        <portal_widget display_value="">e13fc368970c4e503c2d3f56f053af97</portal_widget>
         <posx>6</posx>
         <posy>3</posy>
         <sys_class_name>sys_grid_canvas_pane</sys_class_name>
