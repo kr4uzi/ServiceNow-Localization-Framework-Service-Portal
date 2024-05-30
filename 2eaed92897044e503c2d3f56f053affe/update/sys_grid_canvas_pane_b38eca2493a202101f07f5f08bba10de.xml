@@ -4,19 +4,19 @@
         <height>3</height>
         <portal_widget display_value="Created 2024-05-30 12:44:28">ff8e062493a202101f07f5f08bba102e</portal_widget>
         <posx>6</posx>
-        <posy>10</posy>
+        <posy>7</posy>
         <sys_class_name>sys_grid_canvas_pane</sys_class_name>
         <sys_created_by>markus.kraus</sys_created_by>
         <sys_created_on>2024-05-30 10:44:28</sys_created_on>
         <sys_id>b38eca2493a202101f07f5f08bba10de</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>aaae13ac974c4e503c2d3f56f053af49</sys_name>
         <sys_package display_value="Localization Framework+ Service Portal" source="x_376096_lfp_sp">2eaed92897044e503c2d3f56f053affe</sys_package>
         <sys_policy/>
         <sys_scope display_value="Localization Framework+ Service Portal">2eaed92897044e503c2d3f56f053affe</sys_scope>
         <sys_update_name>sys_grid_canvas_pane_b38eca2493a202101f07f5f08bba10de</sys_update_name>
         <sys_updated_by>markus.kraus</sys_updated_by>
-        <sys_updated_on>2024-05-30 10:45:14</sys_updated_on>
+        <sys_updated_on>2024-05-30 21:16:11</sys_updated_on>
         <width>2</width>
     </sys_grid_canvas_pane>
 </record_update>
