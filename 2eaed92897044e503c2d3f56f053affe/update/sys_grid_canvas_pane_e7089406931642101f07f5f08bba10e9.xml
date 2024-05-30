@@ -3,20 +3,20 @@
         <grid_canvas display_value="PA LF+ SP - Pages">aaae13ac974c4e503c2d3f56f053af49</grid_canvas>
         <height>3</height>
         <portal_widget display_value="Created 2024-05-22 09:41:55">a3085406931642101f07f5f08bba108b</portal_widget>
-        <posx>2</posx>
+        <posx>8</posx>
         <posy>4</posy>
         <sys_class_name>sys_grid_canvas_pane</sys_class_name>
         <sys_created_by>markus.kraus</sys_created_by>
         <sys_created_on>2024-05-22 07:41:55</sys_created_on>
         <sys_id>e7089406931642101f07f5f08bba10e9</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>45</sys_mod_count>
         <sys_name>aaae13ac974c4e503c2d3f56f053af49</sys_name>
         <sys_package display_value="Localization Framework+ Service Portal" source="x_376096_lfp_sp">2eaed92897044e503c2d3f56f053affe</sys_package>
         <sys_policy/>
         <sys_scope display_value="Localization Framework+ Service Portal">2eaed92897044e503c2d3f56f053affe</sys_scope>
         <sys_update_name>sys_grid_canvas_pane_e7089406931642101f07f5f08bba10e9</sys_update_name>
         <sys_updated_by>markus.kraus</sys_updated_by>
-        <sys_updated_on>2024-05-22 10:59:24</sys_updated_on>
+        <sys_updated_on>2024-05-30 10:45:14</sys_updated_on>
         <width>4</width>
     </sys_grid_canvas_pane>
 </record_update>
