@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_report_users_groups">
     <sys_report_users_groups action="INSERT_OR_UPDATE">
         <group_id/>
-        <report_id display_value="Widget Instance Translations">5edf5fac974c4e503c2d3f56f053af2d</report_id>
+        <report_id display_value="Instance Translations">5edf5fac974c4e503c2d3f56f053af2d</report_id>
         <sys_class_name>sys_report_users_groups</sys_class_name>
         <sys_created_by>markus.kraus</sys_created_by>
         <sys_created_on>2024-04-29 01:50:16</sys_created_on>
