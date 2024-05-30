@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="DELETE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <condition/>
+        <description/>
+        <local_or_existing>Local</local_or_existing>
+        <name>InsightsGenerator</name>
+        <operation display_value="execute">execute</operation>
+        <script/>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>markus.kraus</sys_created_by>
+        <sys_created_on>2024-04-28 23:30:52</sys_created_on>
+        <sys_id>621b0cea937102101f07f5f08bba1067</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>InsightsGenerator</sys_name>
+        <sys_package display_value="Localization Framework+ Service Portal" source="x_376096_lfp_sp">2eaed92897044e503c2d3f56f053affe</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Localization Framework+ Service Portal">2eaed92897044e503c2d3f56f053affe</sys_scope>
+        <sys_update_name>sys_security_acl_621b0cea937102101f07f5f08bba1067</sys_update_name>
+        <sys_updated_by>markus.kraus</sys_updated_by>
+        <sys_updated_on>2024-04-28 23:30:52</sys_updated_on>
+        <type display_value="client_callable_script_include">client_callable_script_include</type>
+    </sys_security_acl>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Localization Framework+ Service Portal">2eaed92897044e503c2d3f56f053affe</application>
+        <file_path/>
+        <instance_id>8e74c4eadba2f910caf99027c59619e3</instance_id>
+        <instance_name>dev217055</instance_name>
+        <name>sys_security_acl_621b0cea937102101f07f5f08bba1067</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><advanced>false</advanced><condition/><description/><local_or_existing>Local</local_or_existing><name>InsightsGenerator</name><operation display_value="execute">execute</operation><script/><security_attribute/><sys_class_name>sys_security_acl</sys_class_name><sys_created_by>markus.kraus</sys_created_by><sys_created_on>2024-04-28 23:30:52</sys_created_on><sys_id>621b0cea937102101f07f5f08bba1067</sys_id><sys_mod_count>0</sys_mod_count><sys_name>InsightsGenerator</sys_name><sys_package display_value="Localization Framework+ Service Portal" source="x_376096_lfp_sp">2eaed92897044e503c2d3f56f053affe</sys_package><sys_policy/><sys_scope display_value="Localization Framework+ Service Portal">2eaed92897044e503c2d3f56f053affe</sys_scope><sys_update_name>sys_security_acl_621b0cea937102101f07f5f08bba1067</sys_update_name><sys_updated_by>markus.kraus</sys_updated_by><sys_updated_on>2024-04-28 23:30:52</sys_updated_on><type display_value="client_callable_script_include">client_callable_script_include</type></sys_security_acl></record_update>]]></payload>
+        <payload_hash>1166797398</payload_hash>
+        <record_name>InsightsGenerator</record_name>
+        <reverted_from/>
+        <source>3b87cf45939002101f07f5f08bba10ae</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>markus.kraus</sys_created_by>
+        <sys_created_on>2024-04-28 23:30:53</sys_created_on>
+        <sys_id>221b0cea937102101f07f5f08bba106c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18f270c10850000001</sys_recorded_at>
+        <sys_updated_by>markus.kraus</sys_updated_by>
+        <sys_updated_on>2024-04-28 23:30:53</sys_updated_on>
+        <type>Access Control</type>
+        <update_guid>661b0cea6e71021047b33a492eeb826b</update_guid>
+        <update_guid_history>661b0cea6e71021047b33a492eeb826b:1166797398</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>markus.kraus</sys_created_by>
+        <sys_created_on>2024-05-30 09:54:19</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl">sys_security_acl</sys_db_object>
+        <sys_id>1fc9227038ed41998d6a8b6ca3147541</sys_id>
+        <sys_metadata>621b0cea937102101f07f5f08bba1067</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>InsightsGenerator</sys_name>
+        <sys_package display_value="Localization Framework+ Service Portal" source="x_376096_lfp_sp">2eaed92897044e503c2d3f56f053affe</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Localization Framework+ Service Portal">2eaed92897044e503c2d3f56f053affe</sys_scope>
+        <sys_scope_delete display_value="">2f0a729adc2f47748696acdb7d387890</sys_scope_delete>
+        <sys_update_name>sys_security_acl_621b0cea937102101f07f5f08bba1067</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_621b0cea937102101f07f5f08bba1067">221b0cea937102101f07f5f08bba106c</sys_update_version>
+        <sys_updated_by>markus.kraus</sys_updated_by>
+        <sys_updated_on>2024-05-30 09:54:19</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

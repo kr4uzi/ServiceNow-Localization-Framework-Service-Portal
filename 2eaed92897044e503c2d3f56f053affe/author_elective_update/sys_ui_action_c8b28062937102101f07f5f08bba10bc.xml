@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="DELETE">
+        <action_name>sysverb_triggerInsightsScheduledJob</action_name>
+        <active>false</active>
+        <client>true</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments>Unfortunately we cannot hook anything to the OOTB insight generation (which btw only works on artefacts with a 'active' field)&#13;
+=&gt; We therefore overwrite the OOTB UI Action in order to start the generation of your custom artefacts</comments>
+        <condition>gs.getProperty('com.glide.sn_lf_refresh_insights', 'true') === 'true';</condition>
+        <form_action>false</form_action>
+        <form_button>false</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <format_for_configurable_workspace>false</format_for_configurable_workspace>
+        <hint/>
+        <isolate_script>true</isolate_script>
+        <list_action>true</list_action>
+        <list_banner_button>true</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>Z_INACTIVE Generate Insights Records</name>
+        <onclick>lfp_sp_generateInsightRecords()</onclick>
+        <order>99</order>
+        <script><![CDATA[function lfp_sp_generateInsightRecords() {
+	var ga = new GlideAjax('x_376096_lfp_sp.InsightsGenerator');
+	ga.addParam('sysparm_name', 'generateInsights');
+	ga.getXMLAnswer(function () {
+		g_list.action('2bfaf993c7031010dd7ab6c427c260f6', 'sysverb_triggerInsightsScheduledJob');
+	});
+}]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>markus.kraus</sys_created_by>
+        <sys_created_on>2024-04-28 23:34:50</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c8b28062937102101f07f5f08bba10bc</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>Z_INACTIVE Generate Insights Records</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Localization Framework+ Service Portal" source="x_376096_lfp_sp">2eaed92897044e503c2d3f56f053affe</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Localization Framework+ Service Portal">2eaed92897044e503c2d3f56f053affe</sys_scope>
+        <sys_update_name>sys_ui_action_c8b28062937102101f07f5f08bba10bc</sys_update_name>
+        <sys_updated_by>markus.kraus</sys_updated_by>
+        <sys_updated_on>2024-05-22 10:40:38</sys_updated_on>
+        <table>sn_lf_insight</table>
+        <ui11_compatible>false</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Localization Framework+ Service Portal">2eaed92897044e503c2d3f56f053affe</application>
+        <file_path/>
+        <instance_id>8e74c4eadba2f910caf99027c59619e3</instance_id>
+        <instance_name>dev217055</instance_name>
+        <name>sys_ui_action_c8b28062937102101f07f5f08bba10bc</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_ui_action"&gt;&lt;sys_ui_action action="INSERT_OR_UPDATE"&gt;&lt;action_name&gt;sysverb_triggerInsightsScheduledJob&lt;/action_name&gt;&lt;active&gt;false&lt;/active&gt;&lt;client&gt;true&lt;/client&gt;&lt;client_script_v2&gt;&lt;![CDATA[function onClick(g_form) {
+
+}]]&gt;&lt;/client_script_v2&gt;&lt;comments&gt;Unfortunately we cannot hook anything to the OOTB insight generation (which btw only works on artefacts with a 'active' field)&amp;#13;
+=&amp;gt; We therefore overwrite the OOTB UI Action in order to start the generation of your custom artefacts&lt;/comments&gt;&lt;condition&gt;gs.getProperty('com.glide.sn_lf_refresh_insights', 'true') === 'true';&lt;/condition&gt;&lt;form_action&gt;false&lt;/form_action&gt;&lt;form_button&gt;false&lt;/form_button&gt;&lt;form_button_v2&gt;false&lt;/form_button_v2&gt;&lt;form_context_menu&gt;false&lt;/form_context_menu&gt;&lt;form_link&gt;false&lt;/form_link&gt;&lt;form_menu_button_v2&gt;false&lt;/form_menu_button_v2&gt;&lt;form_style/&gt;&lt;format_for_configurable_workspace&gt;false&lt;/format_for_configurable_workspace&gt;&lt;hint/&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;list_action&gt;true&lt;/list_action&gt;&lt;list_banner_button&gt;true&lt;/list_banner_button&gt;&lt;list_button&gt;false&lt;/list_button&gt;&lt;list_choice&gt;false&lt;/list_choice&gt;&lt;list_context_menu&gt;false&lt;/list_context_menu&gt;&lt;list_link&gt;false&lt;/list_link&gt;&lt;list_save_with_form_button&gt;false&lt;/list_save_with_form_button&gt;&lt;list_style/&gt;&lt;messages/&gt;&lt;name&gt;Z_INACTIVE Generate Insights Records&lt;/name&gt;&lt;onclick&gt;lfp_sp_generateInsightRecords()&lt;/onclick&gt;&lt;order&gt;99&lt;/order&gt;&lt;script&gt;&lt;![CDATA[function lfp_sp_generateInsightRecords() {
+	var ga = new GlideAjax('x_376096_lfp_sp.InsightsGenerator');
+	ga.addParam('sysparm_name', 'generateInsights');
+	ga.getXMLAnswer(function () {
+		g_list.action('2bfaf993c7031010dd7ab6c427c260f6', 'sysverb_triggerInsightsScheduledJob');
+	});
+}]]&gt;&lt;/script&gt;&lt;show_insert&gt;true&lt;/show_insert&gt;&lt;show_multiple_update&gt;false&lt;/show_multiple_update&gt;&lt;show_query&gt;false&lt;/show_query&gt;&lt;show_update&gt;true&lt;/show_update&gt;&lt;sys_class_name&gt;sys_ui_action&lt;/sys_class_name&gt;&lt;sys_created_by&gt;markus.kraus&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-04-28 23:34:50&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;c8b28062937102101f07f5f08bba10bc&lt;/sys_id&gt;&lt;sys_mod_count&gt;10&lt;/sys_mod_count&gt;&lt;sys_name&gt;Z_INACTIVE Generate Insights Records&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Localization Framework+ Service Portal" source="x_376096_lfp_sp"&gt;2eaed92897044e503c2d3f56f053affe&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Localization Framework+ Service Portal"&gt;2eaed92897044e503c2d3f56f053affe&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_action_c8b28062937102101f07f5f08bba10bc&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;markus.kraus&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-22 10:40:38&lt;/sys_updated_on&gt;&lt;table&gt;sn_lf_insight&lt;/table&gt;&lt;ui11_compatible&gt;false&lt;/ui11_compatible&gt;&lt;ui16_compatible&gt;false&lt;/ui16_compatible&gt;&lt;/sys_ui_action&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-871036350</payload_hash>
+        <record_name>Z_INACTIVE Generate Insights Records</record_name>
+        <reverted_from/>
+        <source>3b87cf45939002101f07f5f08bba10ae</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>markus.kraus</sys_created_by>
+        <sys_created_on>2024-05-22 10:40:38</sys_created_on>
+        <sys_id>bdf0010693d642101f07f5f08bba106a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18f9fe383960000001</sys_recorded_at>
+        <sys_updated_by>markus.kraus</sys_updated_by>
+        <sys_updated_on>2024-05-22 10:40:38</sys_updated_on>
+        <type>UI Action</type>
+        <update_guid>75f001067ad642108e86496ddaee3c6a</update_guid>
+        <update_guid_history>75f001067ad642108e86496ddaee3c6a:-871036350,449928ea26350210749515b67836ad6e:-1941719833,520dccee547102103165b930f09157b9:-1561576519,b5dc44ee7d710210b8d30f98e241f389:1114576973,c5cc8c6e727102106619437f853ca518:-1535704316,cd7c80ae22710210767a3f5de7efeb99:-1526817097,ab5c4c6e4c710210d4ea9b21fa7cc1fb:-851985366,9c5c4c6ec27102103757205963292933:-488548744,741c0cea0871021093c24678727072c5:160327977,e60c0cea5b71021099241fabe233ece8:1671294077,640cc8ea527102101d789451449338da:842014182</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>markus.kraus</sys_created_by>
+        <sys_created_on>2024-05-30 09:54:41</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_action">sys_ui_action</sys_db_object>
+        <sys_id>a4b10fc8223245cc92af172458871464</sys_id>
+        <sys_metadata>c8b28062937102101f07f5f08bba10bc</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Z_INACTIVE Generate Insights Records</sys_name>
+        <sys_package display_value="Localization Framework+ Service Portal" source="x_376096_lfp_sp">2eaed92897044e503c2d3f56f053affe</sys_package>
+        <sys_parent display_value="Sn Lf Insight">e47eb80c935082101f07f5f08bba10a8</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Localization Framework+ Service Portal">2eaed92897044e503c2d3f56f053affe</sys_scope>
+        <sys_scope_delete display_value="">2f0a729adc2f47748696acdb7d387890</sys_scope_delete>
+        <sys_update_name>sys_ui_action_c8b28062937102101f07f5f08bba10bc</sys_update_name>
+        <sys_update_version display_value="sys_ui_action_c8b28062937102101f07f5f08bba10bc">bdf0010693d642101f07f5f08bba106a</sys_update_version>
+        <sys_updated_by>markus.kraus</sys_updated_by>
+        <sys_updated_on>2024-05-30 09:54:41</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

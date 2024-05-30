@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>package_private</access>
+        <active>false</active>
+        <api_name>x_376096_lfp_sp.InsightsGenerator</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>InsightsGenerator</name>
+        <script><![CDATA[/* global Class, global, GlideRecord, gs */
+/* eslint no-undef: "error" */
+var InsightsGenerator = Class.create();
+InsightsGenerator.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	
+	generateInsights: function () {
+		gs.eventQueue('x_376096_lfp_sp.generated_insights');
+	},
+
+    type: 'InsightsGenerator'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>markus.kraus</sys_created_by>
+        <sys_created_on>2024-04-28 23:30:52</sys_created_on>
+        <sys_id>95ba88a2937102101f07f5f08bba10e1</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>InsightsGenerator</sys_name>
+        <sys_package display_value="Localization Framework+ Service Portal" source="x_376096_lfp_sp">2eaed92897044e503c2d3f56f053affe</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Localization Framework+ Service Portal">2eaed92897044e503c2d3f56f053affe</sys_scope>
+        <sys_update_name>sys_script_include_95ba88a2937102101f07f5f08bba10e1</sys_update_name>
+        <sys_updated_by>markus.kraus</sys_updated_by>
+        <sys_updated_on>2024-05-22 10:41:10</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Localization Framework+ Service Portal">2eaed92897044e503c2d3f56f053affe</application>
+        <file_path/>
+        <instance_id>8e74c4eadba2f910caf99027c59619e3</instance_id>
+        <instance_name>dev217055</instance_name>
+        <name>sys_script_include_95ba88a2937102101f07f5f08bba10e1</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;false&lt;/active&gt;&lt;api_name&gt;x_376096_lfp_sp.InsightsGenerator&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;true&lt;/client_callable&gt;&lt;description/&gt;&lt;name&gt;InsightsGenerator&lt;/name&gt;&lt;script&gt;&lt;![CDATA[/* global Class, global, GlideRecord, gs */
+/* eslint no-undef: "error" */
+var InsightsGenerator = Class.create();
+InsightsGenerator.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	
+	generateInsights: function () {
+		gs.eventQueue('x_376096_lfp_sp.generated_insights');
+	},
+
+    type: 'InsightsGenerator'
+});]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;markus.kraus&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-04-28 23:30:52&lt;/sys_created_on&gt;&lt;sys_id&gt;95ba88a2937102101f07f5f08bba10e1&lt;/sys_id&gt;&lt;sys_mod_count&gt;6&lt;/sys_mod_count&gt;&lt;sys_name&gt;InsightsGenerator&lt;/sys_name&gt;&lt;sys_package display_value="Localization Framework+ Service Portal" source="x_376096_lfp_sp"&gt;2eaed92897044e503c2d3f56f053affe&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Localization Framework+ Service Portal"&gt;2eaed92897044e503c2d3f56f053affe&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_95ba88a2937102101f07f5f08bba10e1&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;markus.kraus&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-22 10:41:10&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-50602875</payload_hash>
+        <record_name>InsightsGenerator</record_name>
+        <reverted_from/>
+        <source>3b87cf45939002101f07f5f08bba10ae</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>markus.kraus</sys_created_by>
+        <sys_created_on>2024-05-22 10:41:10</sys_created_on>
+        <sys_id>6911010693d642101f07f5f08bba1073</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18f9fe3ff540000001</sys_recorded_at>
+        <sys_updated_by>markus.kraus</sys_updated_by>
+        <sys_updated_on>2024-05-22 10:41:10</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>2111010626d64210478ded061fe81c73</update_guid>
+        <update_guid_history>2111010626d64210478ded061fe81c73:-50602875,985768a6193502101e2e44130b2ea5bb:-651230860,2a7d082202b1021031d91b4be067302b:902982410,352dcc22aab10210f64573e4a87b68b9:-124155738,8afc44ee2c710210d258fcf2fa9d9d8d:1082297580,80ab0ceaf27102104314efe3477c9608:1896271215,e61b0ceac27102109a6763ab27ea7372:2085918154</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>markus.kraus</sys_created_by>
+        <sys_created_on>2024-05-30 09:54:25</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>8aa4a255af534d6cacc9c0f029560c90</sys_id>
+        <sys_metadata>95ba88a2937102101f07f5f08bba10e1</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>InsightsGenerator</sys_name>
+        <sys_package display_value="Localization Framework+ Service Portal" source="x_376096_lfp_sp">2eaed92897044e503c2d3f56f053affe</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Localization Framework+ Service Portal">2eaed92897044e503c2d3f56f053affe</sys_scope>
+        <sys_scope_delete display_value="">2f0a729adc2f47748696acdb7d387890</sys_scope_delete>
+        <sys_update_name>sys_script_include_95ba88a2937102101f07f5f08bba10e1</sys_update_name>
+        <sys_update_version display_value="sys_script_include_95ba88a2937102101f07f5f08bba10e1">6911010693d642101f07f5f08bba1073</sys_update_version>
+        <sys_updated_by>markus.kraus</sys_updated_by>
+        <sys_updated_on>2024-05-30 09:54:25</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

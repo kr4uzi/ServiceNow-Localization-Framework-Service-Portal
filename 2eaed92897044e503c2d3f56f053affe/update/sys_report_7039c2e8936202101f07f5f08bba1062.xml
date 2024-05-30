@@ -45,12 +45,12 @@
         <donut_width_percent>30</donut_width_percent>
         <end_time/>
         <exp_report_attrs>true</exp_report_attrs>
-        <field>language</field>
-        <field_list>document,table_name,language,status</field_list>
-        <filter table="sn_lf_insight">table_name=sp_instance^EQ<item endquery="false" field="table_name" goto="false" newquery="false" operator="=" or="false" value="sp_instance"/>
-            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        <field>sys_created_on</field>
+        <field_list>document,table_name,language,status,sys_created_on,sys_created_by</field_list>
+        <filter table="sn_lf_insight">table_name=ticket_tab_configuration^status=2<item endquery="false" field="table_name" goto="false" newquery="false" operator="=" or="false" value="ticket_tab_configuration"/>
+            <item display_value="Translation in Progress" endquery="false" field="status" goto="false" newquery="false" operator="=" or="false" value="2"/>
         </filter>
-        <formatting_configuration>{"table":"incident","stringFormattingProperties":{},"durationFormattingProperties":{},"dateFormattingProperties":{},"numberFormattingProperties":{}}</formatting_configuration>
+        <formatting_configuration>{"table":"incident","stringFormattingProperties":{},"durationFormattingProperties":{},"dateFormattingProperties":{},"numberFormattingProperties":{"$COUNT_FIELD$,AGGREGATION":{"decimalPrecision":2,"groupingUsed":true,"roundingMode":"HALF_UP","metricPrefixSymbolUsed":false,"showOriginalNumberInTooltip":true,"addValueInTooltip":true}}}</formatting_configuration>
         <from/>
         <funnel_neck_percent>30</funnel_neck_percent>
         <gauge_autoscale>true</gauge_autoscale>
@@ -88,7 +88,7 @@
         <sc_stackby_variable_id/>
         <score_color display_value="Black">65b30218a9fe3dba0120df8611520d97</score_color>
         <series_name_text/>
-        <set_color>color_palette</set_color>
+        <set_color>null</set_color>
         <show_chart_border>false</show_chart_border>
         <show_chart_data_label>false</show_chart_data_label>
         <show_chart_title>report</show_chart_title>
@@ -99,30 +99,30 @@
         <show_legend>true</show_legend>
         <show_legend_border>false</show_legend_border>
         <show_marker>false</show_marker>
-        <show_zero>false</show_zero>
+        <show_zero>true</show_zero>
         <source_type>table</source_type>
         <start_time/>
         <style_config/>
         <sumfield/>
         <sys_class_name>sys_report</sys_class_name>
         <sys_created_by>markus.kraus</sys_created_by>
-        <sys_created_on>2024-01-27 10:02:38</sys_created_on>
-        <sys_id>5edf5fac974c4e503c2d3f56f053af2d</sys_id>
-        <sys_mod_count>5</sys_mod_count>
-        <sys_name>Instance Translations</sys_name>
+        <sys_created_on>2024-05-30 10:21:04</sys_created_on>
+        <sys_id>7039c2e8936202101f07f5f08bba1062</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Tab Translations In Progress</sys_name>
         <sys_package display_value="Localization Framework+ Service Portal" source="x_376096_lfp_sp">2eaed92897044e503c2d3f56f053affe</sys_package>
         <sys_policy/>
         <sys_scope display_value="Localization Framework+ Service Portal">2eaed92897044e503c2d3f56f053affe</sys_scope>
-        <sys_update_name>sys_report_5edf5fac974c4e503c2d3f56f053af2d</sys_update_name>
+        <sys_update_name>sys_report_7039c2e8936202101f07f5f08bba1062</sys_update_name>
         <sys_updated_by>markus.kraus</sys_updated_by>
-        <sys_updated_on>2024-05-30 10:25:03</sys_updated_on>
+        <sys_updated_on>2024-05-30 10:24:39</sys_updated_on>
         <table>sn_lf_insight</table>
-        <title>Instance Translations</title>
+        <title>Tab Translations In Progress</title>
         <title_horizontal_alignment>center</title_horizontal_alignment>
         <title_vertical_alignment>top</title_vertical_alignment>
         <to/>
-        <trend_field>status</trend_field>
-        <type>bar</type>
+        <trend_field/>
+        <type>single_score</type>
         <upper_limit/>
         <use_color_heatmap>false</use_color_heatmap>
         <use_null_in_trend>false</use_null_in_trend>

@@ -12,21 +12,8 @@
 /* eslint no-undef: "error" */
 var PortalProcessor = Class.create();
 PortalProcessor.prototype = Object.extendsObject(global.LFArtifactProcessorSNC, {
-    category: 'localization_framework', // DO NOT REMOVE THIS LINE!
 
-    /**********
-     * Extracts the translatable content for the artifact record
-     * 
-     * @param params.tableName The table name of the artifact record
-     * @param params.sysId The sys_id of the artifact record 
-     * @param params.language Language into which the artifact has to be translated (Target language)
-     * @return LFDocumentContent object
-     **********/
     getTranslatableContent: function(params) {
-		/**********
-         * Use LFDocumentContentBuilder to build the LFDocumentContent object
-         * Use the build() to return the LFDocumentContent object
-         **********/
 		const builder = new global.LFDocumentContentBuilder('v1', params.language, params.sysId, params.tableName, params);
 		
 		const widgetTables = new GlideTableHierarchy('sp_widget').getAllExtensions();
@@ -36,12 +23,14 @@ PortalProcessor.prototype = Object.extendsObject(global.LFArtifactProcessorSNC, 
 			this.processWidget(params.sysId, builder);
 		} else if (instanceTables.indexOf(params.tableName) != -1) {
 			this.processWidgetInstance(params.sysId, builder);
-		} else if (params.tableName == 'sp_page') {
-			const widgetSysIDs = this.getWidgets(params.sysId);
-			for (let i = 0; i < widgetSysIDs.length; i++) {
-				this.processWidget(widgetSysIDs[i], builder);
-			}
+		} else if (params.tableName && params.sysId) {
+			this.processTrivialRecord(params.tableName, params.sysId, builder);
 		} else if (params.tableName == 'sp_portal') {
+			// 2024-05-30 MKR: I don't think im going to implement this...
+			// The initial idea was: only show content which is actually used
+			// You should have your platform clean and mean:
+			// If you have a widget in the system it needs to be fully translated - wether or not you're using it
+			// Same applies to all other artifacts
 			// TODO: Implement...
 			// 1.) Static Pages
 			// 2.) Page Routes
@@ -52,6 +41,18 @@ PortalProcessor.prototype = Object.extendsObject(global.LFArtifactProcessorSNC, 
 		return builder.build();
     },
 	
+	processTrivialRecord: function (recordTable, recordSysID, builder) {
+		const anyGr = new GlideRecord(recordTable);
+		anyGr.query('sys_id', recordSysID);
+		anyGr.setLimit(1);
+		anyGr.query();
+		if (anyGr.next()) {
+			builder.processTranslatableFieldsForSingleRecord(anyGr, anyGr.getDisplayValue());
+		}
+	},
+	
+	// gets all widgets used in the given page (this function is currently not used)
+	// still keeping the source code because i might use it somewhere else...
 	getWidgets: function (pageSysID) {
 		const containerGr = new GlideRecord('sp_container');
 		containerGr.addQuery('sp_page', pageSysID);
@@ -196,29 +197,20 @@ PortalProcessor.prototype = Object.extendsObject(global.LFArtifactProcessorSNC, 
 		return [...new Set(messages)];
 	},
 
-    /**********
-     * Uncomment the saveTranslatedContent function to override the default behavior of saving translations
-     * 
-     * @param documentContent LFDocumentContent object
-     * @return
-     **********/
-    /**********
-        saveTranslatedContent: function(documentContent) {},
-    **********/
-
+    category: 'localization_framework',
     type: 'PortalProcessor'
 });]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>markus.kraus</sys_created_by>
         <sys_created_on>2024-01-27 00:39:19</sys_created_on>
         <sys_id>6cce916897044e503c2d3f56f053af3f</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_name>PortalProcessor</sys_name>
         <sys_package display_value="Localization Framework+ Service Portal" source="x_376096_lfp_sp">2eaed92897044e503c2d3f56f053affe</sys_package>
         <sys_policy/>
         <sys_scope display_value="Localization Framework+ Service Portal">2eaed92897044e503c2d3f56f053affe</sys_scope>
         <sys_update_name>sys_script_include_6cce916897044e503c2d3f56f053af3f</sys_update_name>
         <sys_updated_by>markus.kraus</sys_updated_by>
-        <sys_updated_on>2024-04-29 02:19:52</sys_updated_on>
+        <sys_updated_on>2024-05-30 10:07:26</sys_updated_on>
     </sys_script_include>
 </record_update>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_script_action">
+    <sysevent_script_action action="DELETE">
+        <active>false</active>
+        <condition_script/>
+        <description/>
+        <event_name>x_376096_lfp_sp.generated_insights</event_name>
+        <name>Z_INACTIVE LF+ SP - Generate Insights</name>
+        <order>100</order>
+        <script><![CDATA[(function () {
+	
+	const generator = new global.LFGenerateLocalizationInsights();
+	if (generator.canRunGenerateInsightsJob()) {
+		try {
+			generator._isArtifactActive = function (artifactGR, internalName) {
+				if (internalName.startsWith('lfp_sp')) {
+					return true;
+				}
+			};
+
+			const configGr = new GlideRecord('sn_lf_config');
+			configGr.addQuery('active', true);
+			configGr.addQuery('sys_scope.scope', 'x_376096_lfp_sp');
+			configGr.query();
+			while (configGr.next()) {
+				if (configGr.sys_scope.scope == 'x_376096_lfp_sp') {
+					generator.generateInsightsForConfigRecord(configGr);
+				}
+			}
+		} catch (e) {
+			gs.error('LF+ SP: Error occurred while running GenerateLocalizationInsights scheduled job: ' + e);
+		}
+	} else {
+		// try again later
+		const gdt = new GlideDateTime();
+		gdt.addSeconds(10);
+		gs.eventQueueScheduled('x_376096_lfp_sp.generated_insights', undefined, undefined, undefined, gdt);
+	}
+	
+})();]]></script>
+        <synchronous>false</synchronous>
+        <sys_class_name>sysevent_script_action</sys_class_name>
+        <sys_created_by>markus.kraus</sys_created_by>
+        <sys_created_on>2024-04-29 01:33:31</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9aa5e826933502101f07f5f08bba1074</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>Z_INACTIVE LF+ SP - Generate Insights</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Localization Framework+ Service Portal" source="x_376096_lfp_sp">2eaed92897044e503c2d3f56f053affe</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Localization Framework+ Service Portal">2eaed92897044e503c2d3f56f053affe</sys_scope>
+        <sys_update_name>sysevent_script_action_9aa5e826933502101f07f5f08bba1074</sys_update_name>
+        <sys_updated_by>markus.kraus</sys_updated_by>
+        <sys_updated_on>2024-05-22 10:40:50</sys_updated_on>
+    </sysevent_script_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Localization Framework+ Service Portal">2eaed92897044e503c2d3f56f053affe</application>
+        <file_path/>
+        <instance_id>8e74c4eadba2f910caf99027c59619e3</instance_id>
+        <instance_name>dev217055</instance_name>
+        <name>sysevent_script_action_9aa5e826933502101f07f5f08bba1074</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sysevent_script_action"&gt;&lt;sysevent_script_action action="INSERT_OR_UPDATE"&gt;&lt;active&gt;false&lt;/active&gt;&lt;condition_script/&gt;&lt;description/&gt;&lt;event_name&gt;x_376096_lfp_sp.generated_insights&lt;/event_name&gt;&lt;name&gt;Z_INACTIVE LF+ SP - Generate Insights&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;script&gt;&lt;![CDATA[(function () {
+	
+	const generator = new global.LFGenerateLocalizationInsights();
+	if (generator.canRunGenerateInsightsJob()) {
+		try {
+			generator._isArtifactActive = function (artifactGR, internalName) {
+				if (internalName.startsWith('lfp_sp')) {
+					return true;
+				}
+			};
+
+			const configGr = new GlideRecord('sn_lf_config');
+			configGr.addQuery('active', true);
+			configGr.addQuery('sys_scope.scope', 'x_376096_lfp_sp');
+			configGr.query();
+			while (configGr.next()) {
+				if (configGr.sys_scope.scope == 'x_376096_lfp_sp') {
+					generator.generateInsightsForConfigRecord(configGr);
+				}
+			}
+		} catch (e) {
+			gs.error('LF+ SP: Error occurred while running GenerateLocalizationInsights scheduled job: ' + e);
+		}
+	} else {
+		// try again later
+		const gdt = new GlideDateTime();
+		gdt.addSeconds(10);
+		gs.eventQueueScheduled('x_376096_lfp_sp.generated_insights', undefined, undefined, undefined, gdt);
+	}
+	
+})();]]&gt;&lt;/script&gt;&lt;synchronous&gt;false&lt;/synchronous&gt;&lt;sys_class_name&gt;sysevent_script_action&lt;/sys_class_name&gt;&lt;sys_created_by&gt;markus.kraus&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-04-29 01:33:31&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;9aa5e826933502101f07f5f08bba1074&lt;/sys_id&gt;&lt;sys_mod_count&gt;11&lt;/sys_mod_count&gt;&lt;sys_name&gt;Z_INACTIVE LF+ SP - Generate Insights&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Localization Framework+ Service Portal" source="x_376096_lfp_sp"&gt;2eaed92897044e503c2d3f56f053affe&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Localization Framework+ Service Portal"&gt;2eaed92897044e503c2d3f56f053affe&lt;/sys_scope&gt;&lt;sys_update_name&gt;sysevent_script_action_9aa5e826933502101f07f5f08bba1074&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;markus.kraus&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-22 10:40:50&lt;/sys_updated_on&gt;&lt;/sysevent_script_action&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1304360738</payload_hash>
+        <record_name>Z_INACTIVE LF+ SP - Generate Insights</record_name>
+        <reverted_from/>
+        <source>3b87cf45939002101f07f5f08bba10ae</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>markus.kraus</sys_created_by>
+        <sys_created_on>2024-05-22 10:40:50</sys_created_on>
+        <sys_id>ac01410693d642101f07f5f08bba10a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18f9fe3b2640000001</sys_recorded_at>
+        <sys_updated_by>markus.kraus</sys_updated_by>
+        <sys_updated_on>2024-05-22 10:40:50</sys_updated_on>
+        <type>Script Action</type>
+        <update_guid>64014106f0d64210009dce5156e61da4</update_guid>
+        <update_guid_history>64014106f0d64210009dce5156e61da4:1304360738,eff0410666d64210999b76f98896bfa0:1384332449,cd933ffc290a02106d714a086c6037a1:871767717,e0f9eb34750a0210578588ad399be031:-341689228,4b496bf0c50a0210db583dce72970b93:1174166138,acf8a7f0990a02106e043b1c6629f786:-2088533391,13f8a46aea3502107aa1484aa7fac9c2:-1955300188,9218202a54350210d66902fdc05b99fc:-1556339973,1ec7a4e666350210c0a2f9bf06729b24:509402740,2387a8a6da350210183658cfecdef031:-1033735062,1c37e4a683350210b03cf1702d36228a:1098970401,032760668935021088382f65efd00934:1996507456</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>markus.kraus</sys_created_by>
+        <sys_created_on>2024-05-30 09:54:38</sys_created_on>
+        <sys_db_object display_value="" name="sysevent_script_action">sysevent_script_action</sys_db_object>
+        <sys_id>0482c6ab38fb4ef3813d661a53f05d49</sys_id>
+        <sys_metadata>9aa5e826933502101f07f5f08bba1074</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Z_INACTIVE LF+ SP - Generate Insights</sys_name>
+        <sys_package display_value="Localization Framework+ Service Portal" source="x_376096_lfp_sp">2eaed92897044e503c2d3f56f053affe</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Localization Framework+ Service Portal">2eaed92897044e503c2d3f56f053affe</sys_scope>
+        <sys_scope_delete display_value="">2f0a729adc2f47748696acdb7d387890</sys_scope_delete>
+        <sys_update_name>sysevent_script_action_9aa5e826933502101f07f5f08bba1074</sys_update_name>
+        <sys_update_version display_value="sysevent_script_action_9aa5e826933502101f07f5f08bba1074">ac01410693d642101f07f5f08bba10a4</sys_update_version>
+        <sys_updated_by>markus.kraus</sys_updated_by>
+        <sys_updated_on>2024-05-30 09:54:38</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
